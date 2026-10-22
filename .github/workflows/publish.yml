@@ -35,6 +35,7 @@ jobs:
       - name: Install pinned Chrome and Linux runtime dependencies
         run: |
           sudo "$(command -v node)" node_modules/@puppeteer/browsers/lib/main-cli.js install chrome@155.0.8059.84 --install-deps --path "$HOME/.cache/vivliostyle/browsers"
+          sudo chown -R "$(id -u):$(id -g)" "$HOME/.cache/vivliostyle"
       - name: Build shared HTML once
         run: |
           npm run build:web
