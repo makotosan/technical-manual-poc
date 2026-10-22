@@ -8,6 +8,12 @@ export default function (eleventyConfig) {
   }
   eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   eleventyConfig.addPassthroughCopy({ "manual/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource/noto-sans-jp/files": "fonts/files",
+    "node_modules/@fontsource/noto-sans-jp/400.css": "fonts/400.css",
+    "node_modules/@fontsource/noto-sans-jp/700.css": "fonts/700.css",
+    "node_modules/@fontsource/noto-sans-jp/LICENSE": "fonts/LICENSE"
+  });
   eleventyConfig.amendLibrary("md", (md) => md.set({ html: false }));
   eleventyConfig.addCollection("chapters", (api) => {
     const chapters = api.getFilteredByGlob("./manual/*.md");

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { spawnSync } from "node:child_process";
+
 
 test("build emits Japanese HTML and a resolvable subpath stylesheet", async () => {
   const html = await readFile("dist-web/index.html", "utf8");
@@ -18,10 +18,4 @@ test("fictional PNG and SVG fixtures are copied intact", async () => {
   }
   const png = await readFile("dist-web/assets/status.png");
   assert.equal(png.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
-});
-
-test("unfinished PDF command fails clearly instead of reporting success", () => {
-  const result = spawnSync(process.execPath, ["scripts/pdf-not-implemented.mjs"], { encoding: "utf8" });
-  assert.equal(result.status, 1);
-  assert.match(result.stderr, /not implemented yet/);
 });

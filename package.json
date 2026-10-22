@@ -4,13 +4,23 @@
   "private": true,
   "type": "module",
   "description": "Single-HTML technical manual publishing PoC",
-  "engines": { "node": "24.19.0", "npm": "10.7.0" },
+  "engines": {
+    "node": "24.19.0",
+    "npm": "10.7.0"
+  },
   "packageManager": "npm@10.7.0",
   "scripts": {
     "dev": "eleventy --serve",
     "build:web": "eleventy",
-    "build:pdf": "node scripts/pdf-not-implemented.mjs",
-    "test": "npm run build:web && node --test"
+    "build:pdf": "npm run build:web && npm run build:pdf:from-html",
+    "test": "npm run build:web && npm run build:pdf:from-html && node --test --test-concurrency=1",
+    "build:pdf:from-html": "node scripts/build-pdf.mjs",
+    "check:pdf": "node scripts/validate-pdf.mjs"
   },
-  "devDependencies": { "@11ty/eleventy": "3.1.7" }
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "@fontsource/noto-sans-jp": "5.3.1",
+    "@vivliostyle/cli": "11.4.0",
+    "pdf-lib": "1.17.1"
+  }
 }

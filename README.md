@@ -8,8 +8,8 @@ manual/*.md -> Eleventy -> dist-web/index.html -> Vivliostyle -> dist-pdf/manual
 
 ## 現在の状態
 
-Issue #2までの構成です。3章のMarkdownをEleventyで変換し、目次付きの単一HTMLとして生成します。
-共通HTMLからのPDF生成はIssue #3、Actions/PagesはIssue #4、全体の受入確認はIssue #5で実装します。
+Issue #3までの構成です。3章のMarkdownをEleventyで変換し、目次付きの単一HTMLとして生成します。
+共通HTMLからA4 PDFを生成できます。Actions/PagesはIssue #4、全体の受入確認はIssue #5で実装します。
 本文は manual/*.md のみで編集します。JavaScriptを使わず、目次から各章へ移動できます。
 
 既存の technical-manual-publisher は独立した保全対象です。このPoCの作業は専用チェックアウト内で行います。
@@ -35,13 +35,13 @@ npm run build:web
 npm test
 ```
 
-出力は dist-web/ です。npm test はHTMLを再生成し、3章の順序・一意な見出しID・章アンカー・ローカルリンクと素材・再ビルドの一致・PDF未実装時のエラーを確認します。
+出力は dist-web/ です。npm test はHTMLとPDFを生成し、章順・見出しID・章アンカー・素材・HTML再ビルドの一致・PDF形式とA4サイズ・ローカル配信を確認します。
 
 ```sh
 npm run build:pdf
 ```
 
-現段階では「未実装」を明示して終了コード1を返します。PDFは生成しません。
+HTMLを新規生成してから dist-pdf/manual.pdf を出力します。初回は固定バージョンのChromeが自動取得されるため、ネットワーク接続が必要です。
 
 ## ファイル構成
 
@@ -53,10 +53,10 @@ npm run build:pdf
 | manual/assets/ | 自作の架空PNG/SVGテスト素材 |
 | src/index.njk | 3章の本文と目次を統合するページ |
 | src/_includes/layout.njk | 共通HTMLレイアウト |
-| styles/web.css | 画面用CSS（印刷用CSSはIssue #3） |
+| styles/web.css | 画面用CSS |
 | eleventy.config.js | 入出力、素材コピー、Pagesサブパス |
 | dist-web/ | 生成HTMLと素材（Git管理外） |
-| dist-pdf/ | 後続Issueで生成するPDF（Git管理外） |
+| dist-pdf/ | 生成PDF（Git管理外） |
 
 原稿はUTF-8です。原稿・素材は架空の公開テスト用とし、顧客情報や機密情報を入れないでください。
 サンプル原稿の assets/ 参照は、Issue #2で統合する index.html を基準としたパスです。
@@ -67,7 +67,7 @@ npm run build:pdf
 - PDFは公開用HTMLを入力にし、Markdownを別途変換しません。
 - 画面と印刷の差分はCSSで扱います。
 - Pagesの /technical-manual-poc/ と同じサブパスでローカルPDF生成を検証します。
-- 日本語フォントとChromiumの固定・導入手順はIssue #3で確定します。
+- 日本語フォントとChromeは以下のバージョンに固定しています。
 - CMS、認証、DB、多言語、製品バリエーションは対象外です。
 - #1 → #2 → #3 → #4 → #5の順で、各IssueのブランチとPRを作成し、人によるレビュー後にマージします。
 
@@ -82,5 +82,34 @@ Pagesの設定・公開URL・PDFダウンロード・全体のロールバック
 - 章IDはファイル名（例: 01-introduction）、見出しIDは章ID-heading-連番です。章内で見出しを挿入・移動すると見出し連番は変わります。長期的な章リンクには章IDを使ってください。
 - 変換済みHTMLの見出しレベルを1段下げ、章ごとのIDを付けます。この処理は lib/chapters.mjs にあり、追加のMarkdown変換はしません。
 - 原稿の画像参照は assets/ファイル名、CSSは /technical-manual-poc/styles/web.css です。同じHTMLを /technical-manual-poc/ でHTTP配信すると双方が解決します。
-- 共通の構造は .manual-header、.chapter-nav、.chapter です。Issue #3の印刷CSSはこれらを使って改ページや目次の表示を調整し、HTML本文を書き換えません。
+- 共通の構造は .manual-header、.chapter-nav、.chapter です。印刷CSSはこれらを使って改ページや目次の表示を調整し、HTML本文を書き換えません。
 - PDF入力はこのHTMLです。印刷用HTMLを別途生成せず、PDF生成時にも公開先Pagesを取得しません。
+## PDF生成と実行前提
+
+- Vivliostyle CLI 11.4.0、Chrome for Testing 155.0.8059.84を使用します。CLIが最初の実行時にOS別ブラウザーをユーザーキャッシュへ自動取得し、以後再利用します。
+- Windowsでは上記Node/npmに加え、ブラウザーを実行できる環境が必要です。Linux CIではChrome実行に必要な共有ライブラリも必要です。Actionsへの導入と確認はIssue #4で行います。
+- 日本語は @fontsource/noto-sans-jp 5.3.1 のNoto Sans JP（400/700）です。フォントとCSSを dist-web/fonts/ へコピーし、ローカルHTTP経由で読み込みます。フォントのライセンスはSIL Open Font License 1.1で、配布物の fonts/LICENSE に含めます。
+- 原稿・画像・フォントを含むビルド成果物を127.0.0.1の空きポートで /technical-manual-poc/ に配信します。PDF完成後または失敗時にサーバーを終了します。公開済みPagesは参照しません。
+- styles/print.css をVivliostyleの追加CSSとして指定します。A4、余白、ページ番号、章開始時の改ページを設定し、目次を含む4ページを生成します（原稿が増えればページ数も増えます）。
+- PDF生成前後で dist-web/index.html のSHA256を比較し、不変を確認します。成功時はハッシュとページ数を表示し、失敗時は不完全なPDFを削除して終了します。
+- PDFのバイト単位の再現性は要求しません。日時などのメタデータは変動します。
+
+HTMLを再ビルドせず、その成果物をPDF化するCI向けコマンド:
+
+```sh
+npm run build:web
+npm run build:pdf:from-html
+npm run check:pdf
+```
+
+npm run check:pdf はPDFの解析可否、複数ページ、全ページのA4サイズを確認します。
+npm test も同じ順で生成・検証します。PDFを表示するには dist-pdf/manual.pdf を通常のPDFビューアーで開いてください。
+
+## PDFの目視確認
+
+1. 目次と3章が順序どおりにあり、各章が改ページされること。
+2. 日本語が欠落・文字化けせず、見出し・本文・ページ番号が読めること。
+3. 第1章のSVG装置図、第2章のPNG色見本、第1章の表が欠落・はみ出しなく表示されること。
+4. PDF入力の共通HTMLが変更されていないという成功ログを確認すること。
+
+ローカルで4ページすべてを画像化して確認済みです。自動検査だけでは文字の欠落や見切れをすべて判定できないため、原稿や印刷CSS変更後は目視確認も行ってください。
