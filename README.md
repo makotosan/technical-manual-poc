@@ -113,3 +113,45 @@ npm test も同じ順で生成・検証します。PDFを表示するには dist
 4. PDF入力の共通HTMLが変更されていないという成功ログを確認すること。
 
 ローカルで4ページすべてを画像化して確認済みです。自動検査だけでは文字の欠落や見切れをすべて判定できないため、原稿や印刷CSS変更後は目視確認も行ってください。
+## GitHub Actions / Pages
+
+.github/workflows/publish.yml が次の処理を行います。
+
+| 起動条件 | 動作 |
+| --- | --- |
+| Pull request | HTMLを1回生成 → そのHTMLからPDF生成 → 成果物テスト → PDFをActions成果物として保存 |
+| mainへのpush | 上記の検証後、同じHTMLをPages成果物にして公開 |
+| 手動実行（main） | mainと同じ処理。Pages設定後の再実行にも使えます |
+| 手動実行（main以外） | ビルド・検証とPDF保存のみ。Pagesへは公開しません |
+
+CIはUbuntu 24.04、Node 24.19.0、npm 10.7.0です。
+lockfileに含まれるPuppeteerブラウザー管理ツールを使い、固定ChromeとLinux実行ライブラリを導入します。
+公式Actionsはコメントにリリース番号を記載し、実行対象をコミットSHAで固定しています。
+
+CIは npm run test:artifacts を使い、生成済みHTML/PDFを再ビルドせずに検査します。
+再ビルドの一致検証は npm run check:reproducibility に分離し、通常の npm test には引き続き含めています。
+PDF前のHTMLハッシュ、検証後のハッシュ、Pagesアップロード用tar内のHTMLを比較します。
+
+### リポジトリ設定
+
+1. GitHubの Settings → Actions → General でActionsを許可し、ワークフローで使用している公式 actions/* を実行可能にします。
+2. Settings → Pages → Build and deployment → Source を GitHub Actions にします。
+3. github-pages環境にブランチ制限を設ける場合はmainを許可します。既存のレビュー保護がある場合はその承認が必要です。
+4. PRの Build and test HTML and PDF が成功したことを確認し、人のレビュー後にmainへマージします。
+5. mainの Publish manual 実行で Deploy GitHub Pages が成功したことを確認します。
+
+想定公開URL: https://makotosan.github.io/technical-manual-poc/
+実際の公開確認は初回mainデプロイ成功後に行います。
+
+### PDFの取得と失敗時の対応
+
+Actions → Publish manual → 対象の成功実行 → Artifacts → manual-pdf をダウンロードし、ZIP内のmanual.pdfを開きます。
+PDF成果物の保持期間は14日です。期限切れの場合はmainでワークフローを再実行してください。
+github-pages成果物はデプロイ用で、PDFとは別です。
+
+PRでデプロイジョブは実行しません。pages: write / id-token: write はmainのデプロイジョブだけに付与します。
+PRチェックが失敗するとジョブは失敗します。マージの強制的な禁止は、別途ブランチ保護の必須チェックが設定されている場合に限ります。
+
+初回のPages公開が失敗した場合はSourceと環境設定を確認し、Actionsからmainの失敗ジョブまたはワークフローを再実行します。
+公開内容を戻す場合は、対象PRのマージをrevertするPRをレビュー・マージし、mainの自動デプロイ成功を確認します。
+このPoCは公開用の架空原稿のみを扱い、独自の秘密鍵や顧客情報を必要としません。

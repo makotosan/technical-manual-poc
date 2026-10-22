@@ -13,9 +13,11 @@
     "dev": "eleventy --serve",
     "build:web": "eleventy",
     "build:pdf": "npm run build:web && npm run build:pdf:from-html",
-    "test": "npm run build:web && npm run build:pdf:from-html && node --test --test-concurrency=1",
+    "test": "npm run build:web && npm run build:pdf:from-html && npm run test:artifacts && npm run check:reproducibility",
     "build:pdf:from-html": "node scripts/build-pdf.mjs",
-    "check:pdf": "node scripts/validate-pdf.mjs"
+    "check:pdf": "node scripts/validate-pdf.mjs",
+    "test:artifacts": "node --test --test-concurrency=1",
+    "check:reproducibility": "node scripts/check-reproducibility.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
