@@ -1,0 +1,7 @@
+:root { color-scheme: light; font-family: sans-serif; color: #182530; background: #fff; }
+body { margin: 0; line-height: 1.8; }
+main { max-width: 56rem; margin: 3rem auto; padding: 0 1.5rem; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #bcc7cf; padding: .5rem; }
+a { color: #075bb5; }
