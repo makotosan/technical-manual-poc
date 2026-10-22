@@ -6,7 +6,7 @@
 **発行者：TM Sample Machinery（架空）**  
 **適用型式：TM-100（PoC構想仕様）**
 
-![TM-100 卓上型自動搬送・検査装置のアイソメトリック概念図](assets/figures/fig-cover-tm100-isometric.svg)
+![TM-100 卓上型自動搬送・検査装置のアイソメトリック概念図](assets/figures/fig-cover-tm100-isometric-detailed.png)
 
 *TM-100 製品外観イメージ（架空製品・概念図。寸法および安全性能は未確定）*
 
