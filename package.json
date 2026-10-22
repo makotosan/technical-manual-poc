@@ -1,0 +1,16 @@
+{
+  "name": "technical-manual-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Single-HTML technical manual publishing PoC",
+  "engines": { "node": "24.19.0", "npm": "10.7.0" },
+  "packageManager": "npm@10.7.0",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build:web": "eleventy",
+    "build:pdf": "node scripts/pdf-not-implemented.mjs",
+    "test": "npm run build:web && node --test"
+  },
+  "devDependencies": { "@11ty/eleventy": "3.1.7" }
+}

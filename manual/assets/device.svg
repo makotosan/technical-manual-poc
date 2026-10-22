@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320" role="img" aria-labelledby="title">
+<title id="title">架空の卓上表示装置の構成図</title>
+<rect width="640" height="320" fill="#edf3f8"/>
+<rect x="100" y="35" width="440" height="220" rx="16" fill="#263b50"/>
+<rect x="125" y="60" width="390" height="165" rx="4" fill="#fff"/>
+<path d="M260 255h120v30H260z" fill="#607d94"/>
+<circle cx="320" cy="240" r="7" fill="#63d7ba"/>
+</svg>
