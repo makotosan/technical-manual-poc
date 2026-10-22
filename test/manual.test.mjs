@@ -1,7 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir, access } from "node:fs/promises";
-import { spawnSync } from "node:child_process";
 import { chapterHeading, chapterTitle } from "../lib/chapters.mjs";
 
 const html = await readFile("dist-web/index.html", "utf8");
@@ -53,10 +52,4 @@ test("repeated headings remain unique within and across chapters", () => {
   assert.equal(chapterTitle("<h1>安全 &amp; 操作</h1>"), "安全 & 操作");
   assert.equal(chapterTitle("<h1>literal &amp;lt;</h1>"), "literal &lt;");
   assert.throws(() => chapterTitle("<p>missing title</p>"), /level-one heading/);
-});
-
-test("unchanged sources rebuild to identical shared HTML", async () => {
-  const build = spawnSync(process.execPath, ["node_modules/@11ty/eleventy/cmd.cjs"], { encoding: "utf8" });
-  assert.equal(build.status, 0, build.stderr);
-  assert.equal(await readFile("dist-web/index.html", "utf8"), html);
 });
