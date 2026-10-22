@@ -68,4 +68,12 @@
 |---|---|---|---|---|---|---|---|
 | （記入例） | A | R-01 | TBD | TBD | TBD | なし | オペレーター |
 
-**図7-1：起動・停止フロー、図7-2：表示例（いずれも制作予定）**。
+![図7-1 operation flow](assets/figures/fig-07-01-operation-flow.svg)
+
+*図7-1：TM-100の技術文書検証用概念図（寸法・安全性能は未確定）*
+
+![図7-2 status display](assets/figures/fig-07-02-status-display.svg)
+
+*図7-2：TM-100の技術文書検証用概念図（寸法・安全性能は未確定）*
+
+
