@@ -1,6 +1,23 @@
 ---
 layout: layout.njk
 title: 技術マニュアル PoC
+permalink: index.html
 ---
-<h1>技術マニュアル PoC</h1>
-<p>Eleventyの初期構成です。3章の共通HTMLへの組み込みはIssue #2で実装します。</p>
+<header class="manual-header">
+  <p class="eyebrow">架空の製品・公開テスト用</p>
+  <h1>技術マニュアル PoC</h1>
+  <p>サンプルビュー 操作マニュアル</p>
+</header>
+<nav class="chapter-nav" aria-label="章目次">
+  <h2>目次</h2>
+  <ol>
+  {% for chapter in collections.chapters %}
+    <li><a href="#{{ chapter.fileSlug }}">{{ chapter.templateContent | chapterTitle }}</a></li>
+  {% endfor %}
+  </ol>
+</nav>
+{% for chapter in collections.chapters %}
+<section class="chapter" id="{{ chapter.fileSlug }}" aria-labelledby="{{ chapter.fileSlug }}-heading-1">
+{{ chapter.templateContent | chapterHeading(chapter.fileSlug) | safe }}
+</section>
+{% endfor %}

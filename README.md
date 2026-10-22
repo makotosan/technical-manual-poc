@@ -8,9 +8,9 @@ manual/*.md -> Eleventy -> dist-web/index.html -> Vivliostyle -> dist-pdf/manual
 
 ## 現在の状態
 
-Issue #1の初期構成です。Eleventyの起動・静的ページ生成と、架空の3章原稿・PNG/SVG素材を用意しています。
-3章の本文統合と章アンカーはIssue #2、共通HTMLからのPDF生成はIssue #3、Actions/PagesはIssue #4、全体の受入確認はIssue #5で実装します。
-現在のHTMLは初期ページであり、3章の本文はまだ表示しません。
+Issue #2までの構成です。3章のMarkdownをEleventyで変換し、目次付きの単一HTMLとして生成します。
+共通HTMLからのPDF生成はIssue #3、Actions/PagesはIssue #4、全体の受入確認はIssue #5で実装します。
+本文は manual/*.md のみで編集します。JavaScriptを使わず、目次から各章へ移動できます。
 
 既存の technical-manual-publisher は独立した保全対象です。このPoCの作業は専用チェックアウト内で行います。
 
@@ -35,7 +35,7 @@ npm run build:web
 npm test
 ```
 
-出力は dist-web/ です。npm test はHTMLを再生成し、日本語ページ・サブパス付きCSS・画像のコピーとPDF未実装時のエラーを確認します。
+出力は dist-web/ です。npm test はHTMLを再生成し、3章の順序・一意な見出しID・章アンカー・ローカルリンクと素材・再ビルドの一致・PDF未実装時のエラーを確認します。
 
 ```sh
 npm run build:pdf
@@ -51,9 +51,9 @@ npm run build:pdf
 | manual/02-safety.md | 安全上の注意 |
 | manual/03-operation.md | 操作方法 |
 | manual/assets/ | 自作の架空PNG/SVGテスト素材 |
-| src/index.njk | 初期ページ（本文統合はIssue #2） |
+| src/index.njk | 3章の本文と目次を統合するページ |
 | src/_includes/layout.njk | 共通HTMLレイアウト |
-| styles/web.css | 画面用CSS |
+| styles/web.css | 画面用CSS（印刷用CSSはIssue #3） |
 | eleventy.config.js | 入出力、素材コピー、Pagesサブパス |
 | dist-web/ | 生成HTMLと素材（Git管理外） |
 | dist-pdf/ | 後続Issueで生成するPDF（Git管理外） |
@@ -72,3 +72,15 @@ npm run build:pdf
 - #1 → #2 → #3 → #4 → #5の順で、各IssueのブランチとPRを作成し、人によるレビュー後にマージします。
 
 Pagesの設定・公開URL・PDFダウンロード・全体のロールバック手順は後続Issueで追記します。
+
+## 共通HTMLの契約
+
+- 出力HTMLは dist-web/index.html の1つだけです。章単位のHTMLは生成しません。
+- manual/manual.11tydata.json の permalink: false により、章はEleventyのコレクション用としてのみ処理します。
+- 章順は eleventy.config.js に明示しています。3章の欠落・追加はビルドエラーにします。
+- 各章は先頭の # 見出しを必須とし、それを目次タイトルとして使います。本文のテンプレート構文処理と生HTMLは無効です。
+- 章IDはファイル名（例: 01-introduction）、見出しIDは章ID-heading-連番です。章内で見出しを挿入・移動すると見出し連番は変わります。長期的な章リンクには章IDを使ってください。
+- 変換済みHTMLの見出しレベルを1段下げ、章ごとのIDを付けます。この処理は lib/chapters.mjs にあり、追加のMarkdown変換はしません。
+- 原稿の画像参照は assets/ファイル名、CSSは /technical-manual-poc/styles/web.css です。同じHTMLを /technical-manual-poc/ でHTTP配信すると双方が解決します。
+- 共通の構造は .manual-header、.chapter-nav、.chapter です。Issue #3の印刷CSSはこれらを使って改ページや目次の表示を調整し、HTML本文を書き換えません。
+- PDF入力はこのHTMLです。印刷用HTMLを別途生成せず、PDF生成時にも公開先Pagesを取得しません。

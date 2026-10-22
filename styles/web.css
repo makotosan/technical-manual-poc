@@ -2,6 +2,12 @@
 body { margin: 0; line-height: 1.8; }
 main { max-width: 56rem; margin: 3rem auto; padding: 0 1.5rem; }
 img { max-width: 100%; height: auto; }
-table { border-collapse: collapse; }
-th, td { border: 1px solid #bcc7cf; padding: .5rem; }
-a { color: #075bb5; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #bcc7cf; padding: .5rem; text-align: left; }
+a { color: #075bb5; text-underline-offset: .2em; }
+a:focus-visible { outline: 3px solid #075bb5; outline-offset: 4px; }
+.eyebrow { color: #4b6072; font-size: .9rem; }
+.chapter-nav { padding: 1rem 1.5rem; border: 1px solid #bcc7cf; border-radius: .5rem; }
+.chapter { margin-top: 3rem; scroll-margin-top: 1rem; }
+.chapter h2 { border-bottom: 2px solid #bcc7cf; padding-bottom: .3rem; }
+.chapter img { display: block; margin: 1.5rem 0; }
