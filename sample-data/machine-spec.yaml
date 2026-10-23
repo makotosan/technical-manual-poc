@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "baseline": "TM100-EDITORIAL-02",
+  "baseline": "TM100-EDITORIAL-03",
   "status": "fictional-review-baseline",
   "disclaimer": "架空の出版検証用。実機設計・作業指示・安全性能の証明ではない。",
   "model": "TM-100",
@@ -99,7 +99,8 @@
     "CP01": "操作パネル",
     "EC01": "制御盤",
     "S03": "ベルトコンベヤ上の開口部を監視するエリアセンサー（達成安全性能未検証）",
-    "BZ01": "非常停止時に発報するブザー"
+    "BZ01": "非常停止時に発報するブザー",
+    "NP01": "装置銘板（操作側右前面の固定外装面）"
   },
   "process": "S01で到着検出、S02遮光時間と搬送速度から搬送方向長さを例示判定。不合格のみA01で排出。内部欠陥や外観検査とは記さない。",
   "states": [
@@ -139,5 +140,27 @@
     "cover": "G02開放で緊急停止（保護停止）",
     "area_sensor": "S03遮光で搬送停止は機能確認の編集前提",
     "failure_action": "直ちに電源を切り、運転禁止とし、サービス窓口へ連絡"
+  },
+  "nameplate": {
+    "id": "NP01",
+    "manufacturer": "TM Sample Machinery",
+    "machine_name": "TABLETOP CONVEYOR / INSPECTION MACHINE",
+    "model": "TM-100",
+    "serial": "TM100-POC-0001",
+    "manufactured": "2026-10",
+    "rating": "1~ AC 100 V   50/60 Hz   3 A",
+    "mass": "35 kg",
+    "manual_id": "TM100-OM-JA-001",
+    "manual_revision": "0.2-draft",
+    "manual_date": "2026-10-23",
+    "qr_target": "https://github.com/makotosan/technical-manual-poc/blob/codex/poc-v02-specification/manual-v02/00-frontmatter.md",
+    "qr_status": "レビュー用原稿URL。最終発行時に固定版取扱説明書URLへ交換・読取検証する",
+    "location": "M01本体フレームの操作側右前面・固定外装面。G02可動カバーには貼らない",
+    "dimensions_mm_proposed": [
+      160,
+      70
+    ],
+    "marking": "PoC SAMPLE / 架空装置。CE等の適合マークは未付与。",
+    "contact": "架空メーカー。住所・電話・メールは未設定、発行前確定。"
   }
 }
