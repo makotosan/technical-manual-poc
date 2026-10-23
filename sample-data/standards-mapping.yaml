@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "baseline": [
+    "ISO 20607:2019",
+    "JIS B 9719:2022"
+  ],
+  "status": "requirement-review-needed",
+  "source": {
+    "iso": "https://www.iso.org/standard/68519.html",
+    "checked_on": "2026-10-23",
+    "verified_scope": "公式公開概要のライフサイクル全体の安全関連内容・構成・表現",
+    "licensed_full_text": "未取得。逐条番号・正式見出し・網羅性・JIS対応未検証"
+  },
+  "claim": "適合・認証を主張しない。編集トピック予定表であり全要求の適合表ではない。",
+  "topics": [
+    {
+      "id": "SM-01",
+      "editorial_topic": "文書識別・目次",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "front",
+        "ch-01"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-02",
+      "editorial_topic": "安全・残留リスク",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-02",
+        "app-c"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-03",
+      "editorial_topic": "機械概要・用途・制限",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-03",
+        "app-a"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-04",
+      "editorial_topic": "輸送・取扱い・保管",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-04"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-05",
+      "editorial_topic": "据付・試運転",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-05"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-06",
+      "editorial_topic": "製造者設定",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-06"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-07",
+      "editorial_topic": "運転",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-07"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-08",
+      "editorial_topic": "品種変更",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-08"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-09",
+      "editorial_topic": "点検・保守",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-09",
+        "app-b",
+        "app-d"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-10",
+      "editorial_topic": "清掃",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-10"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-11",
+      "editorial_topic": "故障診断・修理",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-11"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-12",
+      "editorial_topic": "撤去・廃棄",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "ch-12"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-13",
+      "editorial_topic": "付属資料・用語・索引",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "app-a",
+        "app-b",
+        "app-c",
+        "app-d",
+        "app-e"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-14",
+      "editorial_topic": "作成・表現・媒体",
+      "clause": null,
+      "status": "review-needed",
+      "locations": [
+        "front",
+        "ch-01"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    }
+  ],
+  "exclusions": [
+    {
+      "topic": "空圧・油圧",
+      "reason": "非搭載の架空構成",
+      "status": "proposed-na-needs-review"
+    },
+    {
+      "topic": "食品・防爆用途",
+      "reason": "意図する使用の対象外",
+      "status": "proposed-na-needs-review"
+    }
+  ],
+  "release_gate": "#14/#15で正式規格との逐条照合・該当性判断・人手承認を完了するまで規格網羅性を合格にしない。"
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "baseline": "TM100-EDITORIAL-01",
+  "status": "fictional-review-baseline",
+  "disclaimer": "架空の出版検証用。実機設計・作業指示・安全性能の証明ではない。",
+  "model": "TM-100",
+  "axes": "操作側から見てX=搬送方向、Y=奥行、Z=高さ。供給端X=0。",
+  "envelope_mm": [
+    1000,
+    500,
+    450
+  ],
+  "mass_kg": 35,
+  "centre_of_gravity_mm": [
+    500,
+    250,
+    180
+  ],
+  "belt": {
+    "length_mm": 800,
+    "width_mm": 120,
+    "surface_height_mm": 200,
+    "speed_m_per_s": [
+      0.05,
+      0.2
+    ]
+  },
+  "workpiece": {
+    "material": "乾燥した非導電性樹脂、安定した平底直方体",
+    "width_mm": [
+      20,
+      80
+    ],
+    "length_mm": [
+      30,
+      120
+    ],
+    "height_mm": [
+      10,
+      50
+    ],
+    "mass_kg_max": 0.2,
+    "simultaneous_max": 3,
+    "pitch_mm_min": 200
+  },
+  "capacity_example": "最大60個/min = 0.20 m/s ÷ 0.20 m × 60。達成保証ではない。",
+  "electrical": {
+    "input": "単相AC100 V 50/60 Hz",
+    "control": "DC24 V",
+    "input_current_A_mock_max": 3,
+    "input_apparent_power_VA_mock_max": 300,
+    "protective_earth": "必要という編集前提。具体的施工・検証は設計資料による。",
+    "energy_sources": [
+      "商用電源",
+      "制御電源",
+      "可動部慣性",
+      "ワーク位置エネルギー"
+    ],
+    "not_fitted": [
+      "空圧",
+      "油圧",
+      "電池"
+    ]
+  },
+  "environment": {
+    "use": "屋内乾燥・非防爆・非食品・非医療",
+    "operating_degC": [
+      10,
+      35
+    ],
+    "storage_degC": [
+      0,
+      40
+    ],
+    "relative_humidity_percent": [
+      30,
+      70
+    ],
+    "condensation": false
+  },
+  "installation": {
+    "clearance_mm": {
+      "operator": 800,
+      "rear": 500,
+      "ends": 500
+    },
+    "support_static_capacity_kg_mock": 100,
+    "note": "本体35 kg+ワーク最大0.6 kgと整合する例示値。動荷重・固定の安全設計値ではない。"
+  },
+  "components": {
+    "M01": "本体フレーム",
+    "M02": "ベルトコンベヤ",
+    "M03": "搬送モータ",
+    "S01": "到着検出光電センサ",
+    "S02": "判定光電センサ",
+    "A01": "電動プッシャ",
+    "G01": "固定ガード",
+    "G02": "開閉監視付き可動ガード",
+    "CP01": "操作パネル",
+    "EC01": "制御盤"
+  },
+  "process": "S01で到着検出、S02遮光時間と搬送速度から搬送方向長さを例示判定。不合格のみA01で排出。内部欠陥や外観検査とは記さない。",
+  "states": [
+    "停止",
+    "準備完了",
+    "自動運転",
+    "異常",
+    "非常停止",
+    "保守（隔離した作業状態。通電手動モードではない）"
+  ],
+  "restart": "停電復旧・ガード再閉鎖・非常停止解除・リセットだけでは始動しない。原因除去と人員退避確認後の独立した運転操作を要する編集前提。",
+  "intended_use": "教育された担当者が規定ワークをガード内で搬送・検出・仕分けする。",
+  "foreseeable_misuse": [
+    "運転中の手による詰まり除去",
+    "ガード・インターロック無効化",
+    "停止表示だけで危険領域へ侵入",
+    "液体・粉体・加熱物・人の搬送",
+    "規定外ワーク・速度",
+    "非常停止を隔離の代用とする"
+  ],
+  "engineering_unverified": [
+    "停止時間・PL/SIL・安全距離",
+    "持上げ点・固定ボルト・締付トルク",
+    "放電時間・無電圧確認方法",
+    "騒音・保護等級・寿命・保守周期",
+    "センサ閾値・プッシャ遅延・判定精度"
+  ],
+  "rule": "未検証の安全関連値を架空の作業合否基準で埋めない。"
+}
