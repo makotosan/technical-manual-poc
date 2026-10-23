@@ -10,6 +10,8 @@
 
 *TM-100 製品外観*
 
+**架空PoC用の編集・出版サンプルです。実機の設計、施工、操作、保守へ転用しないでください。現段階のPoC文書ゲートは合格ですが、ISO/JISの最終適合評価は[Issue #22](https://github.com/makotosan/technical-manual-poc/issues/22)で継続しています。**
+
 ## 装置銘板と本書の適用
 
 本書は架空PoC用のTM-100、製造番号TM100-POC-0001、製造年月2026-10を対象とする総合取扱説明書の草稿です。実在の製造・検査記録を表しません。作業前に銘板NP01の型式・製造番号と本書の適用を照合してください。銘板例と貼付位置は[第3章3.10](03-machine-overview.md)を参照してください。
@@ -38,20 +40,20 @@
 
 ## 目次
 
-1. はじめに
-2. 安全上の注意
-3. 装置の概要
-4. 輸送・運搬・保管
-5. 据付・組立・試運転
-6. 初期設定・調整
-7. 運転操作
-8. 品種切替・段取り替え
-9. 点検・保守
-10. 清掃
-11. 故障診断・修理
-12. 撤去・解体・廃棄
+1. [はじめに](01-introduction.md)
+2. [安全上の注意](02-safety.md)
+3. [装置の概要](03-machine-overview.md)
+4. [輸送・運搬・保管](04-transport.md)
+5. [据付・組立・試運転](05-installation.md)
+6. [初期設定・調整](06-settings.md)
+7. [運転操作](07-operation.md)
+8. [品種切替・段取り替え](08-changeover.md)
+9. [点検・保守](09-maintenance.md)
+10. [清掃](10-cleaning.md)
+11. [故障診断・修理](11-troubleshooting.md)
+12. [撤去・解体・廃棄](12-decommissioning.md)
 
-付録A 主要仕様・設定値／付録B 点検記録表／付録C 警告ラベル／付録D 交換部品／付録E 用語集・索引
+[付録A 主要仕様・設定値](appendices/a-specifications.md)／[付録B 点検記録表](appendices/b-inspection.md)／[付録C 残留リスク・警告ラベル統合一覧](appendices/c-warning-labels.md)／[付録D 交換部品](appendices/d-spare-parts.md)／[付録E 用語集・索引](appendices/e-glossary-index.md)
 
 ## 記号および表記
 
