@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">TM-100 卓上型自動搬送・検査装置 アイソメトリック概念図</title>
+<desc id="desc">右上から見た三次元概念図。フレーム、ベルトコンベヤ、透明保護ガード、二つの光電センサ、電動排出プッシャ、制御盤、前面の運転・停止・リセット・非常停止操作部を示す。寸法や安全性能を示すものではない。</desc>
+<defs><linearGradient id="deck" x2="0" y2="1"><stop stop-color="#dce6ee"/><stop offset="1" stop-color="#a9bbc9"/></linearGradient><linearGradient id="belt" x2="0" y2="1"><stop stop-color="#566b7c"/><stop offset="1" stop-color="#2b4153"/></linearGradient><linearGradient id="glass"><stop stop-color="#c7e9f8" stop-opacity=".53"/><stop offset="1" stop-color="#8dc6e0" stop-opacity=".21"/></linearGradient></defs>
+<rect width="1200" height="760" fill="#ffffff"/>
+<ellipse cx="608" cy="625" rx="430" ry="78" fill="#dbe5ec" opacity=".46"/>
+<!-- base cabinet and four legs -->
+<path d="M215 430 L703 535 L1025 381 L539 281Z" fill="#f1f6fa" stroke="#476071" stroke-width="3"/>
+<path d="M215 430 L703 535 L703 578 L215 474Z" fill="#8da4b4" stroke="#476071" stroke-width="3"/>
+<path d="M703 535 L1025 381 L1025 424 L703 578Z" fill="#748e9e" stroke="#476071" stroke-width="3"/>
+<path d="M265 482 L303 491 L303 604 L265 595Z M653 563 L693 571 L693 682 L653 672Z" fill="#536d7e" stroke="#395467" stroke-width="3"/>
+<path d="M966 446 L1004 428 L1004 554 L966 572Z" fill="#526b7a" stroke="#395467" stroke-width="3"/>
+<!-- conveyor plane -->
+<path d="M290 348 L718 436 L932 335 L504 247Z" fill="url(#belt)" stroke="#2c4050" stroke-width="5"/>
+<path d="M290 348 L718 436 L718 468 L290 380Z" fill="#344c5f" stroke="#233b4b" stroke-width="3"/>
+<path d="M718 436 L932 335 L932 365 L718 468Z" fill="#253d4e" stroke="#233b4b" stroke-width="3"/>
+<path d="M340 342 L734 425 M382 324 L773 407 M426 305 L816 388" stroke="#7793a7" stroke-width="2" opacity=".65"/>
+<!-- workpieces -->
+<path d="M441 322 L479 331 L508 317 L472 307Z" fill="#ebba62" stroke="#895e21" stroke-width="2"/>
+<path d="M441 322 L479 331 L479 351 L441 342Z M479 331 L508 317 L508 336 L479 351Z" fill="#d99b40" stroke="#895e21" stroke-width="2"/>
+<path d="M594 354 L634 363 L664 348 L623 340Z" fill="#f3c777" stroke="#895e21" stroke-width="2"/>
+<path d="M594 354 L634 363 L634 382 L594 374Z M634 363 L664 348 L664 368 L634 382Z" fill="#d99b40" stroke="#895e21" stroke-width="2"/>
+<!-- protection guard transparent -->
+<path d="M339 270 L715 352 L896 267 L520 186Z" fill="url(#glass)" stroke="#4b95b4" stroke-width="4"/>
+<path d="M339 270 L715 352 L715 442 L339 360Z" fill="url(#glass)" stroke="#4b95b4" stroke-width="3"/>
+<path d="M715 352 L896 267 L896 358 L715 442Z" fill="url(#glass)" stroke="#4b95b4" stroke-width="3"/>
+<path d="M520 186 L520 275 M715 352 L715 442 M896 267 L896 358" stroke="#6daeca" stroke-width="3"/>
+<path d="M339 270 L339 360" stroke="#4b95b4" stroke-width="3"/>
+<!-- sensors -->
+<path d="M528 230 L546 234 L546 292 L528 287Z" fill="#2a6581" stroke="#1f4658" stroke-width="2"/>
+<path d="M672 260 L690 264 L690 323 L672 317Z" fill="#2a6581" stroke="#1f4658" stroke-width="2"/>
+<circle cx="542" cy="273" r="7" fill="#7fd0ff"/><circle cx="685" cy="308" r="7" fill="#7fd0ff"/>
+<!-- electric push mechanism -->
+<path d="M821 293 L890 312 L928 291 L859 272Z" fill="#d9b2a3" stroke="#7a5a50" stroke-width="3"/>
+<path d="M821 293 L890 312 L890 344 L821 325Z" fill="#b9795c" stroke="#7a5a50" stroke-width="3"/>
+<path d="M807 327 L842 337 L842 361 L807 351Z" fill="#ed9a71" stroke="#8c533b" stroke-width="2"/>
+<!-- control enclosure -->
+<path d="M764 477 L900 411 L983 430 L847 499Z" fill="#e1eaf0" stroke="#506a7a" stroke-width="3"/>
+<path d="M764 477 L847 499 L847 612 L764 590Z" fill="#a7bbc9" stroke="#506a7a" stroke-width="3"/>
+<path d="M847 499 L983 430 L983 541 L847 612Z" fill="#819eaf" stroke="#506a7a" stroke-width="3"/>
+<!-- controls front face left -->
+<path d="M442 502 L627 541 L627 609 L442 569Z" fill="#e9f1f5" stroke="#506a7a" stroke-width="3"/>
+<path d="M463 513 L558 533 L558 558 L463 538Z" fill="#203d51"/>
+<circle cx="476" cy="554" r="9" fill="#32965f" stroke="#275e42" stroke-width="2"/>
+<circle cx="509" cy="561" r="9" fill="#e6c35e" stroke="#998332" stroke-width="2"/>
+<circle cx="543" cy="568" r="9" fill="#5c9ec4" stroke="#39617c" stroke-width="2"/>
+<circle cx="592" cy="576" r="19" fill="#e54a3f" stroke="#a22b26" stroke-width="4"/>
+<circle cx="592" cy="576" r="11" fill="#b92f29"/>
+<!-- product ID and note -->
+<text x="118" y="94" font-family="sans-serif" font-weight="700" font-size="47" fill="#1c3d53">TM-100</text>
+<text x="120" y="132" font-family="sans-serif" font-size="23" fill="#587184">卓上型自動搬送・検査装置</text>
+<text x="120" y="690" font-family="sans-serif" font-size="19" fill="#4c6170">アイソメトリック概念図｜架空製品・寸法／安全性能は未確定</text>
+</svg>
