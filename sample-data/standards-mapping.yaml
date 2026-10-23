@@ -287,10 +287,10 @@
     {
       "clause": "4.10.1",
       "printed_page": 5,
-      "assessment": "不足",
+      "assessment": "部分充足",
       "normative_kind": "要求",
-      "evidence": "第2章2.4/2.7、危険源台帳",
-      "finding": "H台帳は危険源一覧。リスク評価・低減方策の結果に基づく残留リスクの同定ではない。",
+      "evidence": "sample-data/residual-risks.yaml、付録C.1〜C.5、図2-3",
+      "finding": "12の作業別リスクについてマップ・危害・ユーザー保護方策・教育・参照を警告ラベル一覧と統合。設計RAと方策実施/検証の根拠、全件性、人手承認、最終出力への組込みは未了。",
       "follow_up": "#10/#14"
     },
     {
