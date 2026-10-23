@@ -46,6 +46,8 @@ jobs:
         run: npm run test:artifacts
       - name: Verify text and image propagation in isolation
         run: npm run test:propagation
+      - name: Verify isolated sidebar and multi-document PDF spike
+        run: npm run spike:test
       - name: Verify shared HTML before packaging
         run: sha256sum --check "$RUNNER_TEMP/manual-html.sha256"
       - name: Upload PDF for review and download
@@ -53,6 +55,15 @@ jobs:
         with:
           name: manual-pdf
           path: dist-pdf/manual.pdf
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload sidebar spike review artifacts
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sidebar-spike-review
+          path: |
+            dist-spike-pdf/manual.pdf
+            dist-spike-review/pdf-*.png
           if-no-files-found: error
           retention-days: 14
       - name: Package and upload Pages HTML

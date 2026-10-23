@@ -1,0 +1,23 @@
+{
+  "title": "左目次・PDF分離 技術検証",
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "第1章 構成の確認",
+      "source": "manual-v02/01-overview.md",
+      "sections": [
+        { "id": "overview-parts", "title": "構成部品", "level": 2 },
+        { "id": "overview-check", "title": "確認の流れ", "level": 2 }
+      ]
+    },
+    {
+      "id": "operation",
+      "title": "第2章 操作の確認",
+      "source": "manual-v02/02-operation.md",
+      "sections": [
+        { "id": "operation-start", "title": "開始する", "level": 2 },
+        { "id": "operation-stop", "title": "終了する", "level": 2 }
+      ]
+    }
+  ]
+}

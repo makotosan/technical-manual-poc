@@ -12,8 +12,8 @@ manual/*.md + manual/assets/
 
 公開サイト: https://makotosan.github.io/technical-manual-poc/
 
-Issue #1〜#4の実装・公開確認を完了しています。Issue #5の受入確認と引き継ぎ資料はレビュー対象です。
-PoC v0.1の完了は受入条件の充足と最終PRのレビュー・マージ後に判断します。
+Issue #1〜#5の実装・受入・公開確認を完了し、PoC v0.1を受入済みです。
+受入コミットは fc326a9f10f6564160a4688b6fc04051c48fa6e0 です。
 [受入結果と引き継ぎ](docs/acceptance.md)を参照してください。
 
 ## セットアップ
@@ -146,3 +146,9 @@ npm auditには既存のVivliostyle依存関係について15件（critical 1 / 
 
 原稿やCSSを変更したら、PDFの全ページを目視でも確認してください。
 自動検査は本文・画像の変更反映を検出しますが、すべての文字欠落、見切れ、改ページの妥当性を判定するものではありません。
+
+## v0.2に先立つ左目次の技術検証（Issue #16）
+
+短い manual-v02/ 原稿で、章別HTML・左目次・モバイル開閉・単一PDFを検証できます。
+実行は npm run spike:dev / npm run spike:test。既定のv0.1生成と現在のPages公開は切り替わりません。
+[設計・検証結果・#13への引き継ぎ](docs/sidebar-spike.md)を参照してください。

@@ -18,7 +18,11 @@
     "check:pdf": "node scripts/validate-pdf.mjs",
     "test:artifacts": "node --test --test-concurrency=1",
     "check:reproducibility": "node scripts/check-reproducibility.mjs",
-    "test:propagation": "node scripts/check-propagation.mjs"
+    "test:propagation": "node scripts/check-propagation.mjs",
+    "spike:dev": "eleventy --config=eleventy.spike.config.js --serve --port=8081",
+    "spike:build:web": "eleventy --config=eleventy.spike.config.js",
+    "spike:build:pdf": "npm run spike:build:web && node scripts/build-spike-pdf.mjs",
+    "spike:test": "npm run spike:build:pdf && node --test spike-checks/acceptance.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

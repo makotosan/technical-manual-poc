@@ -154,3 +154,8 @@ dist-pdf/
 
 # Generated acceptance screenshots
 dist-acceptance/
+
+# Isolated sidebar spike outputs
+dist-spike-web/
+dist-spike-pdf/
+dist-spike-review/

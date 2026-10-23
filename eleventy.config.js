@@ -3,7 +3,7 @@ import { chapterHeading, chapterTitle } from "./lib/chapters.mjs";
 const chapterFiles = ["01-introduction", "02-safety", "03-operation"];
 
 export default function (eleventyConfig) {
-  for (const path of ["README.md", "docs/**", "dist-web/**", "dist-pdf/**", "test/**", "scripts/**", "lib/**"]) {
+  for (const path of ["README.md", "manual-v02/**", "spike/**", "docs/**", "dist-web/**", "dist-pdf/**", "test/**", "scripts/**", "lib/**"]) {
     eleventyConfig.ignores.add(path);
   }
   eleventyConfig.addPassthroughCopy({ "styles": "styles" });
