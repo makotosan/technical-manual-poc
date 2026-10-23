@@ -36,7 +36,7 @@ test("manifest controls active chapter, hierarchy, stable IDs and PDF entry orde
     for (const section of chapter.sections) assert.ok(html.includes(`id="${section.id}"`));
   }
   const config = JSON.parse(await readFile("dist-spike-pdf/vivliostyle.config.json", "utf8"));
-  assert.deepEqual(config.entry.map(e => relative(resolve("dist-spike-web"), e.path).replaceAll("\\", "/")), paths);
+  assert.deepEqual(config.entry.map(e => relative(resolve("dist-spike-web"), resolve(config.entryContext, e.path)).replaceAll("\\", "/")), paths);
   const publication = JSON.parse(await readFile("dist-spike-pdf/work/publication.json", "utf8"));
   assert.deepEqual(publication.readingOrder.map(e => e.url), paths);
   assert.throws(() => chapterMarkup("<h1>違う見出し</h1>", manifest.chapters[0]), /drift/);

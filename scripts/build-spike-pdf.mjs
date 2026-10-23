@@ -17,7 +17,7 @@ try {
     language: "ja",
     size: "A4",
     entryContext: resolve("dist-spike-web"),
-    entry: files.map(file => ({ path: resolve("dist-spike-web/" + file) })),
+    entry: files.map(file => ({ path: file })),
     workspaceDir: resolve("dist-spike-pdf/work"),
     output: resolve("dist-spike-pdf/manual.pdf")
   };
