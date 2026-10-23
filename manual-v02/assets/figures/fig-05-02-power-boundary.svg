@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="580" viewBox="0 0 1120 580" role="img" aria-labelledby="title desc">
+<title id="title">図5-2 電源と保護の境界</title>
+<desc id="desc">単相AC100 V入力 → EC01制御盤 → DC24 V制御 → M03搬送・A01排出 → 電気担当が接続検証</desc>
+<rect width="1120" height="580" fill="white"/>
+<g font-family="Yu Gothic, sans-serif" fill="#183345">
+<text x="42" y="58" font-size="28" font-weight="700">図5-2 電源と保護の境界</text>
+<rect x="45" y="160" width="186" height="160" rx="10" fill="#edf3f7" stroke="#315c77" stroke-width="2"/>
+<circle cx="75" cy="192" r="17" fill="#315c77"/><text x="75" y="199" text-anchor="middle" font-size="20" fill="white">1</text>
+<text x="59" y="237" font-size="18">単相AC100 V</text>
+<text x="59" y="265" font-size="18">入力</text>
+<path d="M236 245h17l-5-5m5 5-5 5" fill="none" stroke="#315c77" stroke-width="3"/>
+<rect x="258" y="160" width="186" height="160" rx="10" fill="#edf3f7" stroke="#315c77" stroke-width="2"/>
+<circle cx="288" cy="192" r="17" fill="#315c77"/><text x="288" y="199" text-anchor="middle" font-size="20" fill="white">2</text>
+<text x="272" y="237" font-size="18">EC01制御盤</text>
+<path d="M449 245h17l-5-5m5 5-5 5" fill="none" stroke="#315c77" stroke-width="3"/>
+<rect x="471" y="160" width="186" height="160" rx="10" fill="#edf3f7" stroke="#315c77" stroke-width="2"/>
+<circle cx="501" cy="192" r="17" fill="#315c77"/><text x="501" y="199" text-anchor="middle" font-size="20" fill="white">3</text>
+<text x="485" y="237" font-size="18">DC24 V制御</text>
+<path d="M662 245h17l-5-5m5 5-5 5" fill="none" stroke="#315c77" stroke-width="3"/>
+<rect x="684" y="160" width="186" height="160" rx="10" fill="#edf3f7" stroke="#315c77" stroke-width="2"/>
+<circle cx="714" cy="192" r="17" fill="#315c77"/><text x="714" y="199" text-anchor="middle" font-size="20" fill="white">4</text>
+<text x="698" y="237" font-size="18">M03搬送・A01</text>
+<text x="698" y="265" font-size="18">排出</text>
+<path d="M875 245h17l-5-5m5 5-5 5" fill="none" stroke="#315c77" stroke-width="3"/>
+<rect x="897" y="160" width="186" height="160" rx="10" fill="#edf3f7" stroke="#315c77" stroke-width="2"/>
+<circle cx="927" cy="192" r="17" fill="#315c77"/><text x="927" y="199" text-anchor="middle" font-size="20" fill="white">5</text>
+<text x="911" y="237" font-size="18">電気担当が接続検証</text>
+<text x="45" y="400" font-size="19">接地・保護・隔離の具体設計は#22で確認。配線施工図ではない。</text>
+<text x="45" y="535" font-size="17">架空TM-100の編集・出版検証用。実機の施工・安全性能を示す図ではありません。</text></g></svg>

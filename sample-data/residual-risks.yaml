@@ -223,5 +223,10 @@
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
       "verification_status": "editorial-draft-engineering-validation-open"
     }
-  ]
+  ],
+  "warning_message_source": "sample-data/safety-messages.json",
+  "legacy_aliases": {
+    "W-01": "W-05",
+    "C-01": "W-06"
+  }
 }

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "status": "fictional-poc",
+  "note": "ANSI風の出版検証。独自概念図はISO登録標識ではない。規格妥当性は#22で確認。",
+  "aliases": {
+    "W-01": "W-05",
+    "C-01": "W-06"
+  },
+  "messages": [
+    {
+      "id": "D-01",
+      "hazardId": "H-03",
+      "severity": "DANGER",
+      "symbol": "electric",
+      "title": "電源部への接触",
+      "consequence": "露出充電部への接触で死亡又は重傷に至る危険があります。",
+      "avoidance": "電気作業権限者が隔離・再投入防止・無電圧確認を完了してください。確認できなければ盤を開けないでください。"
+    },
+    {
+      "id": "D-02",
+      "hazardId": "H-10",
+      "severity": "DANGER",
+      "symbol": "electric",
+      "title": "解体時の蓄積電荷",
+      "consequence": "遮断後の蓄積電荷への接触で致命的な感電のおそれがあります。",
+      "avoidance": "電気担当者が承認済み放電と残留電荷確認を完了してください。待ち時間を推測して作業を開始しないでください。"
+    },
+    {
+      "id": "W-02",
+      "hazardId": "H-01",
+      "severity": "WARNING",
+      "symbol": "entanglement",
+      "title": "搬送部への巻き込まれ",
+      "consequence": "指や衣服がローラに巻き込まれると重傷を負うおそれがあります。",
+      "avoidance": "ガードを閉じて運転してください。詰まりは停止・報告し、保守担当者が隔離して処置してください。"
+    },
+    {
+      "id": "W-03",
+      "hazardId": "H-02",
+      "severity": "WARNING",
+      "symbol": "crush",
+      "title": "排出プッシャによる挟まれ",
+      "consequence": "プッシャと固定部で指が圧挫するおそれがあります。",
+      "avoidance": "排出口へ手を入れないでください。調整・除去は保守担当者が隔離・再投入防止・残留確認後に実施してください。"
+    },
+    {
+      "id": "W-04",
+      "hazardId": "H-04",
+      "severity": "WARNING",
+      "symbol": "restart",
+      "title": "停止中の不意な起動",
+      "consequence": "他者の操作や電源復旧で動き出し、重大なけがにつながるおそれがあります。",
+      "avoidance": "停止表示・非常停止を隔離の代用にしないでください。全エネルギー源と作業者間の再投入防止・復旧権限を確認してください。"
+    },
+    {
+      "id": "W-05",
+      "hazardId": "H-01",
+      "severity": "WARNING",
+      "symbol": "entanglement",
+      "title": "未教育者の操作・保護装置の無効化",
+      "consequence": "無許可の操作やガード無効化により接近し、重傷を負うおそれがあります。",
+      "avoidance": "役割別教育と許可を受けた担当者だけが操作してください。ガードや監視機能を短絡・取外し・固定で無効化しないでください。"
+    },
+    {
+      "id": "W-06",
+      "hazardId": "H-05",
+      "severity": "WARNING",
+      "symbol": "load",
+      "title": "荷の落下・不安定な据付",
+      "consequence": "落下・転倒した装置が身体を挟むおそれがあります。",
+      "avoidance": "質量・重心・把持位置・運搬具・支持・固定を承認計画と照合してください。未確定なら移動せず、荷の下へ入らないでください。",
+      "relatedHazardIds": [
+        "H-08"
+      ]
+    },
+    {
+      "id": "W-07",
+      "hazardId": "H-07",
+      "severity": "WARNING",
+      "symbol": "projection",
+      "title": "規定外ワークの飛散",
+      "consequence": "飛び出したワークで眼や身体を損傷するおそれがあります。",
+      "avoidance": "品種・寸法・質量・姿勢・速度を照合してください。飛散・詰まり時は停止し、顔や手を近づけず報告してください。"
+    },
+    {
+      "id": "W-08",
+      "hazardId": "H-09",
+      "severity": "WARNING",
+      "symbol": "restart",
+      "title": "原因未除去の再始動",
+      "consequence": "再始動時に挟まれ・飛散が生じるおそれがあります。",
+      "avoidance": "原因除去・ガード復旧・危険領域無人を確認してください。権限者の承認後、リセットとは別の始動操作で再開してください。"
+    },
+    {
+      "id": "W-09",
+      "hazardId": "H-10",
+      "severity": "WARNING",
+      "symbol": "load",
+      "title": "解体中の残留エネルギー",
+      "consequence": "支持を失った部材が動き手足を挟むおそれがあります。",
+      "avoidance": "部材支持・隔離・残留確認を完了してください。承認順序と支持を確認できなければ部品を外さないでください。"
+    },
+    {
+      "id": "C-02",
+      "hazardId": "H-06",
+      "severity": "CAUTION",
+      "symbol": "cut",
+      "title": "取り外した部材の端部",
+      "consequence": "静止した板金端部で手を切るおそれがあります。",
+      "avoidance": "隔離後に部材を保持し端部を確認してください。静止部材の取扱いに適した切創防止保護具を使用してください。"
+    },
+    {
+      "id": "C-03",
+      "hazardId": "H-06",
+      "severity": "CAUTION",
+      "symbol": "cut",
+      "title": "梱包材の開梱",
+      "consequence": "梱包の鋭い端や工具で指を切るおそれがあります。",
+      "avoidance": "荷の固定を確認し、身体から離れる向きに開梱工具を操作してください。張力のある結束材の正面に立たないでください。"
+    },
+    {
+      "id": "C-04",
+      "hazardId": "H-06",
+      "severity": "CAUTION",
+      "symbol": "cut",
+      "title": "清掃時の破損片",
+      "consequence": "破損片や端部で手を切るおそれがあります。",
+      "avoidance": "停止・必要な隔離後、破片を目視確認してください。素手で拾わず承認用具と保護具で回収してください。"
+    },
+    {
+      "id": "C-05",
+      "hazardId": "H-06",
+      "severity": "CAUTION",
+      "symbol": "crush",
+      "title": "保守工具の落下",
+      "consequence": "落とした工具で手足を打つおそれがあります。",
+      "avoidance": "工具を安定した場所に置き、足元を整理してください。復旧時に工具の数と残留を確認してください。"
+    },
+    {
+      "id": "C-06",
+      "hazardId": "H-06",
+      "severity": "CAUTION",
+      "symbol": "cut",
+      "title": "交換部品の取扱い",
+      "consequence": "摩耗部品の割れ・端で切創を負うおそれがあります。",
+      "avoidance": "新旧部品を分けて保持してください。端部を保護し承認容器で運搬してください。"
+    },
+    {
+      "id": "N-01",
+      "hazardId": null,
+      "severity": "NOTICE",
+      "symbol": null,
+      "title": "文書の適用範囲",
+      "consequence": "架空仕様の転用は機器損傷につながります。",
+      "avoidance": "この原稿は出版検証だけに使用してください。実機は承認済み製造者資料を使用してください。"
+    },
+    {
+      "id": "N-02",
+      "hazardId": null,
+      "severity": "NOTICE",
+      "symbol": null,
+      "title": "清掃液による機器損傷",
+      "consequence": "指定外溶剤・水噴射はセンサーや電気部品を損傷します。",
+      "avoidance": "承認された清掃材・量・方法を確認してください。水洗いや無断の溶剤変更を行わないでください。"
+    },
+    {
+      "id": "N-03",
+      "hazardId": null,
+      "severity": "NOTICE",
+      "symbol": null,
+      "title": "設定記録の喪失",
+      "consequence": "変更前の記録がないと品種データを誤復旧するおそれがあります。",
+      "avoidance": "レシピ番号・版・変更前後値・承認者を記録してください。未承認設定を上書きしないでください。"
+    }
+  ]
+}

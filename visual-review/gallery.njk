@@ -1,0 +1,6 @@
+---
+permalink: gallery.html
+layout: layout.njk
+title: 図版ギャラリー
+---
+<div class="gallery">{% for figure in figures %}<figure><img src="{{ figure.path | replace('manual-v02/', '') }}" alt="{{ figure.caption }}"><figcaption>{{ figure.id }} {{ figure.caption }}</figcaption></figure>{% endfor %}</div>

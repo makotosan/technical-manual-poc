@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "figures": [
+    {
+      "id": "F-01",
+      "path": "manual-v02/assets/figures/fig-cover-tm100-isometric-detailed.png",
+      "caption": "TM-100 卓上型自動搬送・検査装置のアイソメトリック概念図",
+      "source": "manual-v02/00-frontmatter.md",
+      "kind": "supplement"
+    },
+    {
+      "id": "F-02",
+      "path": "manual-v02/assets/figures/fig-02-03-residual-risk-map.svg",
+      "caption": "TM-100残留リスクマップ",
+      "source": "manual-v02/02-safety.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-03",
+      "path": "manual-v02/assets/figures/fig-02-01-hazard-locations.svg",
+      "caption": "図2-1 危険源H-01～H-10の概念配置",
+      "source": "manual-v02/02-safety.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-04",
+      "path": "manual-v02/assets/figures/fig-02-02-energy-isolation.svg",
+      "caption": "図2-2 保守前のエネルギー管理の概念フロー",
+      "source": "manual-v02/02-safety.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-05",
+      "path": "manual-v02/assets/figures/fig-03-01-overall-layout.svg",
+      "caption": "図3-1 TM-100の全体外観と搬送方向",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-06",
+      "path": "manual-v02/assets/figures/fig-03-02-component-map.svg",
+      "caption": "図3-2 TM-100の主要機器番号",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-07",
+      "path": "manual-v02/assets/figures/fig-03-03-installation-space.svg",
+      "caption": "図3-3 外形寸法および設置余裕の概念図",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-08",
+      "path": "manual-v02/assets/figures/fig-03-04-control-panel.svg",
+      "caption": "図3-4 操作パネル構成例",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-09",
+      "path": "manual-v02/assets/figures/fig-03-05-nameplate.svg",
+      "caption": "図3-5 TM-100装置銘板。型式・製造番号・製造年月・電源定格・質量・メーカー・取扱説明書へのアクセス情報",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "supplement"
+    },
+    {
+      "id": "F-10",
+      "path": "manual-v02/assets/figures/fig-03-06-nameplate-location.svg",
+      "caption": "図3-6 装置銘板NP01の貼付位置。本体操作側右前面の固定外装面",
+      "source": "manual-v02/03-machine-overview.md",
+      "kind": "supplement"
+    },
+    {
+      "id": "F-11",
+      "path": "manual-v02/assets/figures/fig-04-01-transport-handling.svg",
+      "caption": "図4-1 transport handling",
+      "source": "manual-v02/04-transport.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-12",
+      "path": "manual-v02/assets/figures/fig-04-02-storage-transfer.svg",
+      "caption": "図4-2 保管から据付への引継ぎ",
+      "source": "manual-v02/04-transport.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-13",
+      "path": "manual-v02/assets/figures/fig-05-01-installation-check.svg",
+      "caption": "図5-1 installation check",
+      "source": "manual-v02/05-installation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-14",
+      "path": "manual-v02/assets/figures/fig-05-02-power-boundary.svg",
+      "caption": "図5-2 電源と保護の境界",
+      "source": "manual-v02/05-installation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-15",
+      "path": "manual-v02/assets/figures/fig-05-03-safety-startup.svg",
+      "caption": "図5-3 始業前安全点検",
+      "source": "manual-v02/05-installation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-16",
+      "path": "manual-v02/assets/figures/fig-06-01-sensor-adjustment.svg",
+      "caption": "図6-1 sensor adjustment",
+      "source": "manual-v02/06-settings.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-17",
+      "path": "manual-v02/assets/figures/fig-06-02-setting-record.svg",
+      "caption": "図6-2 設定変更の承認",
+      "source": "manual-v02/06-settings.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-18",
+      "path": "manual-v02/assets/figures/fig-07-01-operation-flow.svg",
+      "caption": "図7-1 operation flow",
+      "source": "manual-v02/07-operation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-19",
+      "path": "manual-v02/assets/figures/fig-07-02-status-display.svg",
+      "caption": "図7-2 status display",
+      "source": "manual-v02/07-operation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-20",
+      "path": "manual-v02/assets/figures/fig-07-03-stop-restart.svg",
+      "caption": "図7-3 停止と再開の分離",
+      "source": "manual-v02/07-operation.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-21",
+      "path": "manual-v02/assets/figures/fig-08-01-changeover-guide.svg",
+      "caption": "図8-1 changeover guide",
+      "source": "manual-v02/08-changeover.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-22",
+      "path": "manual-v02/assets/figures/fig-09-01-maintenance-points.svg",
+      "caption": "図9-1 maintenance points",
+      "source": "manual-v02/09-maintenance.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-23",
+      "path": "manual-v02/assets/figures/fig-09-02-isolation-boundary.svg",
+      "caption": "図9-2 保守前のエネルギー管理",
+      "source": "manual-v02/09-maintenance.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-24",
+      "path": "manual-v02/assets/figures/fig-09-03-maintenance-handover.svg",
+      "caption": "図9-3 保守後の引渡し",
+      "source": "manual-v02/09-maintenance.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-25",
+      "path": "manual-v02/assets/figures/fig-10-01-cleaning-zones.svg",
+      "caption": "図10-1 cleaning zones",
+      "source": "manual-v02/10-cleaning.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-26",
+      "path": "manual-v02/assets/figures/fig-11-01-fault-decision.svg",
+      "caption": "図11-1 fault decision",
+      "source": "manual-v02/11-troubleshooting.md",
+      "kind": "core"
+    },
+    {
+      "id": "F-27",
+      "path": "manual-v02/assets/figures/fig-12-01-disposal-zones.svg",
+      "caption": "図12-1 disposal zones",
+      "source": "manual-v02/12-decommissioning.md",
+      "kind": "core"
+    }
+  ],
+  "tables": [
+    {
+      "id": "T-01",
+      "source": "manual-v02/00-frontmatter.md",
+      "heading": "文書の管理",
+      "ordinal_in_source": 1,
+      "rows": 7,
+      "acceptance_set": "baseline-18",
+      "category": "metadata"
+    },
+    {
+      "id": "T-02",
+      "source": "manual-v02/00-frontmatter.md",
+      "heading": "改訂履歴",
+      "ordinal_in_source": 2,
+      "rows": 1,
+      "acceptance_set": "baseline-18",
+      "category": "metadata"
+    },
+    {
+      "id": "T-03",
+      "source": "manual-v02/01-introduction.md",
+      "heading": "1.2 本書の適用範囲",
+      "ordinal_in_source": 1,
+      "rows": 6,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-04",
+      "source": "manual-v02/01-introduction.md",
+      "heading": "1.3 対象読者と必要な力量",
+      "ordinal_in_source": 2,
+      "rows": 5,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-05",
+      "source": "manual-v02/01-introduction.md",
+      "heading": "1.6 用語および略語",
+      "ordinal_in_source": 3,
+      "rows": 8,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-06",
+      "source": "manual-v02/02-safety.md",
+      "heading": "2.2 安全メッセージの区分",
+      "ordinal_in_source": 1,
+      "rows": 4,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-07",
+      "source": "manual-v02/02-safety.md",
+      "heading": "2.4 危険源と残留リスク",
+      "ordinal_in_source": 2,
+      "rows": 10,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-08",
+      "source": "manual-v02/02-safety.md",
+      "heading": "2.14 安全情報の照合",
+      "ordinal_in_source": 3,
+      "rows": 10,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-09",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.2 主要構成",
+      "ordinal_in_source": 1,
+      "rows": 13,
+      "acceptance_set": "baseline-18",
+      "category": "specifications"
+    },
+    {
+      "id": "T-10",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.4 想定仕様",
+      "ordinal_in_source": 2,
+      "rows": 11,
+      "acceptance_set": "baseline-18",
+      "category": "specifications"
+    },
+    {
+      "id": "T-11",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.6 装置のレイアウトと危険箇所",
+      "ordinal_in_source": 3,
+      "rows": 5,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-12",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.7 操作パネル",
+      "ordinal_in_source": 4,
+      "rows": 6,
+      "acceptance_set": "baseline-18",
+      "category": "operating_settings"
+    },
+    {
+      "id": "T-13",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.8 動作モード",
+      "ordinal_in_source": 5,
+      "rows": 5,
+      "acceptance_set": "baseline-18",
+      "category": "operating_settings"
+    },
+    {
+      "id": "T-14",
+      "source": "manual-v02/03-machine-overview.md",
+      "heading": "3.10 装置銘板および警告ラベル",
+      "ordinal_in_source": 6,
+      "rows": 8,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-15",
+      "source": "manual-v02/04-transport.md",
+      "heading": "4.2 輸送前の確認",
+      "ordinal_in_source": 1,
+      "rows": 5,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-16",
+      "source": "manual-v02/04-transport.md",
+      "heading": "4.6 保管から据付への引継ぎ",
+      "ordinal_in_source": 2,
+      "rows": 4,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-17",
+      "source": "manual-v02/05-installation.md",
+      "heading": "5.2 据付条件",
+      "ordinal_in_source": 1,
+      "rows": 7,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-18",
+      "source": "manual-v02/05-installation.md",
+      "heading": "5.5.2 点検項目と合格条件",
+      "ordinal_in_source": 2,
+      "rows": 3,
+      "acceptance_set": "baseline-18",
+      "category": "inspections"
+    },
+    {
+      "id": "T-19",
+      "source": "manual-v02/06-settings.md",
+      "heading": "6.3 初期設定台帳",
+      "ordinal_in_source": 1,
+      "rows": 6,
+      "acceptance_set": "baseline-18",
+      "category": "operating_settings"
+    },
+    {
+      "id": "T-20",
+      "source": "manual-v02/07-operation.md",
+      "heading": "7.9 運転記録",
+      "ordinal_in_source": 1,
+      "rows": 1,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-21",
+      "source": "manual-v02/08-changeover.md",
+      "heading": "8.2 作業前の確認",
+      "ordinal_in_source": 1,
+      "rows": 5,
+      "acceptance_set": "baseline-18",
+      "category": "operating_settings"
+    },
+    {
+      "id": "T-22",
+      "source": "manual-v02/08-changeover.md",
+      "heading": "8.6 切替記録",
+      "ordinal_in_source": 2,
+      "rows": 1,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-23",
+      "source": "manual-v02/09-maintenance.md",
+      "heading": "9.3 点検の分類と周期",
+      "ordinal_in_source": 1,
+      "rows": 7,
+      "acceptance_set": "baseline-18",
+      "category": "inspections"
+    },
+    {
+      "id": "T-24",
+      "source": "manual-v02/09-maintenance.md",
+      "heading": "9.8 点検記録",
+      "ordinal_in_source": 2,
+      "rows": 1,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-25",
+      "source": "manual-v02/11-troubleshooting.md",
+      "heading": "11.3 故障コード一覧",
+      "ordinal_in_source": 1,
+      "rows": 7,
+      "acceptance_set": "baseline-18",
+      "category": "faults"
+    },
+    {
+      "id": "T-26",
+      "source": "manual-v02/11-troubleshooting.md",
+      "heading": "11.5 代表的な故障と対処",
+      "ordinal_in_source": 2,
+      "rows": 5,
+      "acceptance_set": "baseline-18",
+      "category": "faults"
+    },
+    {
+      "id": "T-27",
+      "source": "manual-v02/12-decommissioning.md",
+      "heading": "12.5 分別廃棄",
+      "ordinal_in_source": 1,
+      "rows": 5,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-28",
+      "source": "manual-v02/appendices/a-specifications.md",
+      "heading": "A.1 TM-100仕様台帳",
+      "ordinal_in_source": 1,
+      "rows": 20,
+      "acceptance_set": "baseline-18",
+      "category": "specifications"
+    },
+    {
+      "id": "T-29",
+      "source": "manual-v02/appendices/a-specifications.md",
+      "heading": "A.2 設定値記録",
+      "ordinal_in_source": 2,
+      "rows": 1,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-30",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.1 運転前点検表",
+      "ordinal_in_source": 1,
+      "rows": 6,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-31",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.2 定期保守点検表",
+      "ordinal_in_source": 2,
+      "rows": 5,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-32",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.3 初回試運転記録",
+      "ordinal_in_source": 3,
+      "rows": 7,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-33",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.4 異常・是正記録",
+      "ordinal_in_source": 4,
+      "rows": 1,
+      "acceptance_set": "baseline-18",
+      "category": "faults"
+    },
+    {
+      "id": "T-35",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.5 安全システムの始業前点検記録",
+      "ordinal_in_source": 6,
+      "rows": 4,
+      "acceptance_set": "baseline-18",
+      "category": "inspections"
+    },
+    {
+      "id": "T-36",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "heading": "B.6 始業前の詳細確認シート（長表の組版検証）",
+      "ordinal_in_source": 7,
+      "rows": 34,
+      "acceptance_set": "baseline-18",
+      "category": "inspections"
+    },
+    {
+      "id": "T-37",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "C.2 残留リスクマップ",
+      "ordinal_in_source": 1,
+      "rows": 6,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-38",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-01 ワーク供給・監視",
+      "ordinal_in_source": 2,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-39",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-02 ローラ付近の異物除去・清掃",
+      "ordinal_in_source": 3,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-40",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-03 排出監視・詰まりへの初動",
+      "ordinal_in_source": 4,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-41",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-04 ガイド調整・排出部の詰まり除去",
+      "ordinal_in_source": 5,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-42",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-05 電気接続・制御盤内部の点検",
+      "ordinal_in_source": 6,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-43",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-06 危険領域へのアクセスと作業者間の引継ぎ",
+      "ordinal_in_source": 7,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-44",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-07 荷下ろし・移設・搬出",
+      "ordinal_in_source": 8,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-45",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-08 カバー・ベルト部品の交換と分解",
+      "ordinal_in_source": 9,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-46",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-09 ワーク供給・仕分け",
+      "ordinal_in_source": 10,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-47",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-10 作業台への設置・固定",
+      "ordinal_in_source": 11,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-48",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-11 異常復帰・再始動",
+      "ordinal_in_source": 12,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-49",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "RR-12 電気切離し・部材取外し",
+      "ordinal_in_source": 13,
+      "rows": 11,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-50",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "C.4 警告ラベルの対応と変更管理",
+      "ordinal_in_source": 14,
+      "rows": 6,
+      "acceptance_set": "baseline-18",
+      "category": "labels"
+    },
+    {
+      "id": "T-51",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "heading": "C.6 共通警告文の識別対応",
+      "ordinal_in_source": 15,
+      "rows": 18,
+      "acceptance_set": "baseline-18",
+      "category": "labels"
+    },
+    {
+      "id": "T-52",
+      "source": "manual-v02/appendices/d-spare-parts.md",
+      "heading": "D.1 交換部品の選定原則",
+      "ordinal_in_source": 1,
+      "rows": 8,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-53",
+      "source": "manual-v02/appendices/d-spare-parts.md",
+      "heading": "D.2 交換部品を手配する際の記録",
+      "ordinal_in_source": 2,
+      "rows": 1,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-55",
+      "source": "manual-v02/appendices/e-glossary-index.md",
+      "heading": "E.1 用語集",
+      "ordinal_in_source": 1,
+      "rows": 12,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    },
+    {
+      "id": "T-56",
+      "source": "manual-v02/appendices/e-glossary-index.md",
+      "heading": "E.2 索引（試作）",
+      "ordinal_in_source": 2,
+      "rows": 15,
+      "acceptance_set": "additional-editorial",
+      "category": "additional-editorial"
+    }
+  ],
+  "note": "基本図24+表紙PNG/銘板2図=掲載27図。18表は仕様3/運転設定4/点検4/故障3/ラベル2/文書2を選定。追加編集表も全件保持。空欄行を表として重複計数しない。"
+}

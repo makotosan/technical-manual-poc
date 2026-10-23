@@ -1,0 +1,15 @@
+@import url("../fonts/400.css");
+@import url("../fonts/700.css");
+@page { size:A4; margin:18mm; @bottom-center {content:counter(page);font-size:9pt;} }
+body {font-family:"Noto Sans JP",sans-serif;font-size:10pt;line-height:1.8;color:#192b38;margin:0;}
+main {max-width:860px;margin:auto;padding:24px;}
+a:focus {outline:3px solid #145c91;outline-offset:3px;}
+h1 {font-size:21pt;} h2 {font-size:15pt;break-after:avoid;}
+table {border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed;}
+thead {display:table-header-group;} th,td {border:1px solid #7e8d98;padding:7px;overflow-wrap:anywhere;vertical-align:top;}
+tr {break-inside:avoid;} th {background:#edf1f4;}
+figure {margin:12px 0;break-inside:avoid;} figure img {width:100%;max-height:100mm;object-fit:contain;}
+.gallery {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.gallery img {height:230px;} figcaption {font-size:9pt;}
+@media screen and (max-width:600px) {main {padding:14px;} .gallery {display:block;} }
+@media print {main {max-width:none;padding:0;margin:0;} .review-navigation {display:none;} .new-page {break-before:page;} }

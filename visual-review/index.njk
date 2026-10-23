@@ -1,0 +1,16 @@
+---
+layout: layout.njk
+title: 図表・警告の組版確認
+---
+<p>架空TM-100の出版検証用。ANSI風の配置であり規格適合を主張しません。</p>
+<nav class="review-navigation"><a href="gallery.html">全図版ギャラリー</a> · <a href="02-safety.html">第2章</a> · <a href="appendices/c-warning-labels.html">付録C</a></nav>
+<h2>共通警告18種</h2>
+{% for message in messages %}
+{% set marker = "[[safety:" + message.id + "]]" %}
+{{ marker | renderContent("md") | safe }}
+{% endfor %}
+<h2 class="new-page">長い点検表</h2>
+{{ "manual-v02/appendices/b-inspection.md" | source | longTable | renderContent("md") | safe }}
+<h2 class="new-page">SVGとPNGの混在</h2>
+<figure><img src="assets/figures/fig-05-03-safety-startup.svg" alt="始業前安全点検のSVG図"><figcaption>SVG：始業前安全点検</figcaption></figure>
+<figure><img src="assets/figures/fig-cover-tm100-isometric-detailed.png" alt="架空TM-100のPNG外観図"><figcaption>PNG：出版検証用の架空外観（形状の設計保証ではない）</figcaption></figure>
