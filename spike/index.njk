@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+---
+<h1 id="book-toc">検証用マニュアル目次</h1>
+<p>短い2章によるWeb左目次と単一PDFの技術検証です。</p>
+<ol class="book-toc">
+{% for item in manifest.chapters %}
+  <li><a href="{{ item.output }}#{{ item.id }}">{{ item.title }}</a>
+    <ol>{% for section in item.sections %}
+      <li><a href="{{ item.output }}#{{ section.id }}">{{ section.title }}</a></li>
+    {% endfor %}</ol>
+  </li>
+{% endfor %}
+</ol>

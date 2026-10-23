@@ -1,0 +1,16 @@
+@import url("../fonts/400.css");
+@import url("../fonts/700.css");
+@page {
+  size: A4;
+  margin: 18mm;
+  @bottom-center { content: counter(page); font-size: 9pt; }
+}
+body { font-family: "Noto Sans JP", sans-serif; font-size: 10pt; line-height: 1.75; }
+.web-sidebar, .web-mobile-toc, .web-skip { display: none !important; }
+.web-shell { display: block !important; max-width: none !important; margin: 0 !important; }
+.reading-area { display: block !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+h1 { font-size: 20pt; }
+h2 { font-size: 13pt; break-after: avoid; }
+img { max-height: 75mm; max-width: 100%; object-fit: contain; }
+tr { break-inside: avoid; }
+p { orphans: 3; widows: 3; }

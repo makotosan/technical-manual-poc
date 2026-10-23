@@ -1,0 +1,16 @@
+<nav aria-label="章と節の目次">
+  <p class="nav-label">ウェブ目次</p>
+  <a href="{{ "../" if chapter else "" }}index.html"{% if not chapter %} aria-current="page"{% endif %}>検証用目次ページ</a>
+  <ol>
+  {% for item in manifest.chapters %}
+    <li>
+      <a href="{{ "../" if chapter else "" }}{{ item.output }}#{{ item.id }}"{% if chapter and chapter.id == item.id %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      <ol>
+      {% for section in item.sections %}
+        <li><a href="{{ "../" if chapter else "" }}{{ item.output }}#{{ section.id }}">{{ section.title }}</a></li>
+      {% endfor %}
+      </ol>
+    </li>
+  {% endfor %}
+  </ol>
+</nav>

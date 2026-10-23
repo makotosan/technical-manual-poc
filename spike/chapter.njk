@@ -1,0 +1,9 @@
+---
+layout: layout.njk
+pagination:
+  data: manifest.chapters
+  size: 1
+  alias: chapter
+permalink: "{{ chapter.output }}"
+---
+{{ chapter.source | chapterSource | renderContent("md") | chapterMarkup(chapter) | safe }}
