@@ -205,7 +205,7 @@
     "sections": "ch-NN-sNN、下位節ch-NN-sNN-sNN。付録app-a-sNN",
     "figures": "F-01..F-24。表示番号と台帳IDを対応づける",
     "tables": "T-01..T-18",
-    "messages": "W-01..W-18。旧D/C/N/W符号は#12で移行対応表を作る",
+    "messages": "W/D/C/Nの既存符号を保持。W-01→W-05、C-01→W-06をaliasで保持。18種・掲載箇所は複数。",
     "reuse": "予約IDは削除後も再利用しない"
   },
   "figure_allocation": {
@@ -234,5 +234,7 @@
     "WARNING": 8,
     "CAUTION": 5,
     "NOTICE": 3
-  }
+  },
+  "visual_inventory": "sample-data/visual-inventory.json",
+  "message_inventory": "sample-data/safety-messages.json"
 }

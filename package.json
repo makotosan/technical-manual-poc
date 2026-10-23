@@ -22,7 +22,11 @@
     "spike:dev": "eleventy --config=eleventy.spike.config.js --serve --port=8081",
     "spike:build:web": "eleventy --config=eleventy.spike.config.js",
     "spike:build:pdf": "npm run spike:build:web && node scripts/build-spike-pdf.mjs",
-    "spike:test": "npm run spike:build:pdf && node --test spike-checks/acceptance.mjs"
+    "spike:test": "npm run spike:build:pdf && node --test spike-checks/acceptance.mjs",
+    "visual:build:web": "eleventy --config=eleventy.visual.config.js",
+    "visual:build:pdf": "npm run visual:build:web && node scripts/build-visual-pdf.mjs",
+    "visual:test": "npm run visual:build:pdf && node --test visual-checks/acceptance.mjs",
+    "visual:browser": "node scripts/check-visual-browser.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

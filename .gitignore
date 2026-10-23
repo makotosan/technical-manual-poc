@@ -159,3 +159,8 @@ dist-acceptance/
 dist-spike-web/
 dist-spike-pdf/
 dist-spike-review/
+
+# Issue 12 isolated visual review
+dist-visual-web/
+dist-visual-pdf/
+dist-visual-review/

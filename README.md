@@ -152,3 +152,6 @@ npm auditには既存のVivliostyle依存関係について15件（critical 1 / 
 短い manual-v02/ 原稿で、章別HTML・左目次・モバイル開閉・単一PDFを検証できます。
 実行は npm run spike:dev / npm run spike:test。既定のv0.1生成と現在のPages公開は切り替わりません。
 [設計・検証結果・#13への引き継ぎ](docs/sidebar-spike.md)を参照してください。
+## 図表・警告表示の検証
+
+Issue #12の共通警告18種と図表の検証は[docs/figures-warnings.md](docs/figures-warnings.md)を参照してください。npm run visual:testで独立したHTML/PDFを作成・検査します。既定の公開版は引き続きv0.1です。
