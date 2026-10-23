@@ -195,7 +195,7 @@
       "status": "proposed-na-needs-review"
     }
   ],
-  "release_gate": "#14/#15で正式規格との逐条照合・該当性判断・人手承認を完了するまで規格網羅性を合格にしない。",
+  "release_gate": "架空PoCの開発・組版・公開受入はユーザー承認により進行可能。規格適合としての最終判定・実機転用に関する残件は#22で追跡。",
   "assessment_baselines": {
     "metadata_commit": "f1ee2f1a4ff17dd622e50d6ee17ad40a303877cd",
     "draft_pr17_commit": "fe59907e0bc3681b2e7978e3745fa2f50cccdc10",
@@ -608,5 +608,13 @@
       "finding": "指示文改善の例として使用。要求は本文4.4/6.3/6.4で判断。",
       "follow_up": "#11/#14"
     }
-  ]
+  ],
+  "poc_gate": {
+    "status": "passed",
+    "approved_by": "user",
+    "date": "2026-10-23",
+    "scope": "PoC仕様・文書の次工程進行",
+    "conformance_follow_up": "https://github.com/makotosan/technical-manual-poc/issues/22",
+    "note": "条項別評価は維持。PoCゲート合格はISO/JIS適合済みを意味しない。"
+  }
 }
