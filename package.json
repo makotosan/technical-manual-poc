@@ -13,16 +13,18 @@
     "dev": "eleventy --serve",
     "build:web": "eleventy",
     "build:pdf": "npm run build:web && npm run build:pdf:from-html",
-    "test": "npm run build:web && npm run build:pdf:from-html && npm run test:artifacts && npm run check:reproducibility",
+    "test": "npm run build:web && npm run build:pdf:from-html && npm run test:artifacts && npm run check:reproducibility && npm run test:propagation",
     "build:pdf:from-html": "node scripts/build-pdf.mjs",
     "check:pdf": "node scripts/validate-pdf.mjs",
     "test:artifacts": "node --test --test-concurrency=1",
-    "check:reproducibility": "node scripts/check-reproducibility.mjs"
+    "check:reproducibility": "node scripts/check-reproducibility.mjs",
+    "test:propagation": "node scripts/check-propagation.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
     "@fontsource/noto-sans-jp": "5.3.1",
     "@vivliostyle/cli": "11.4.0",
-    "pdf-lib": "1.17.1"
+    "pdf-lib": "1.17.1",
+    "mupdf": "1.28.0"
   }
 }

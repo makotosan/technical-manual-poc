@@ -151,3 +151,6 @@ vite.config.ts.timestamp-*
 # Manual publishing outputs
 dist-web/
 dist-pdf/
+
+# Generated acceptance screenshots
+dist-acceptance/

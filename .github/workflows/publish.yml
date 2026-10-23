@@ -44,6 +44,8 @@ jobs:
         run: npm run build:pdf:from-html
       - name: Test existing artifacts without rebuilding
         run: npm run test:artifacts
+      - name: Verify text and image propagation in isolation
+        run: npm run test:propagation
       - name: Verify shared HTML before packaging
         run: sha256sum --check "$RUNNER_TEMP/manual-html.sha256"
       - name: Upload PDF for review and download
