@@ -24,6 +24,9 @@ try {
  await page.setViewport({width:1100,height:1200});
  await page.addStyleTag({content:"html{filter:grayscale(1)}"});
  await page.screenshot({path:"docs/visual-review/monochrome.png"});
+ await page.$eval('[data-message-id="C-03"]',el=>el.scrollIntoView());
+ await page.screenshot({path:"docs/visual-review/monochrome-caution-notice.png"});
+
  await page.goto(server.url+"gallery.html",{waitUntil:"networkidle0"});
  await page.evaluate(()=>document.fonts.ready);
  assert(await page.$$eval("img",els=>els.length===27&&els.every(x=>x.complete&&x.naturalWidth>0)));

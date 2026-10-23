@@ -18,6 +18,18 @@ test("inventory retains all figures/tables and exact 18 severity types",async()=
  assert.equal(hazards.size,10);
  for(const f of inv.figures){await access(f.path);const src=await readFile(f.source,"utf8");assert(src.includes(f.path.split("/").at(-1)));}
  for(const table of inv.tables){const src=await readFile(table.source,"utf8");assert(src.includes(table.heading));}
+ const chapterPlan=JSON.parse(await readFile("sample-data/content-inventory.yaml","utf8"));
+ const sources=[chapterPlan.frontmatter.source,...chapterPlan.chapters.map(x=>x.source),...chapterPlan.appendices.map(x=>x.source)];
+ const parser=new MarkdownIt({html:false}).use(safetyMarkdown);
+ let actualTables=0;const used=new Set();
+ for(const source of sources){
+  const text=await readFile(source,"utf8");
+  actualTables+=parser.parse(text,{}).filter(t=>t.type==="table_open").length;
+  for(const match of text.matchAll(/\[\[safety:([WDCN]-[0-9]{2})\]\]/g)) used.add(match[1]);
+ }
+ assert.equal(actualTables,inv.tables.length,"inventory matches independently parsed source tables");
+ for(const message of messages)assert(used.has(message.id),message.id+" missing from manuscript");
+
 });
 test("shared renderer preserves safety semantics and rejects unknown markers",()=>{
  const md=new MarkdownIt({html:false}).use(safetyMarkdown);
