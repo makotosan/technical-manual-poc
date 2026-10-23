@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "status": "架空編集用。実機リスク評価ではない。",
+  "hazards": [
+    {
+      "id": "H-01",
+      "hazard": "巻き込まれ",
+      "harm": "指・衣服の巻込み",
+      "components": [
+        "M02",
+        "M03"
+      ],
+      "chapters": [
+        "ch-07",
+        "ch-09",
+        "ch-10"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-02",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-02",
+      "hazard": "プッシャ挟まれ",
+      "harm": "指の圧挫",
+      "components": [
+        "A01"
+      ],
+      "chapters": [
+        "ch-07",
+        "ch-08",
+        "ch-11"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-03",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-03",
+      "hazard": "電気",
+      "harm": "感電・熱傷",
+      "components": [
+        "EC01"
+      ],
+      "chapters": [
+        "ch-05",
+        "ch-09",
+        "ch-12"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "D-01",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-04",
+      "hazard": "予期しない起動",
+      "harm": "可動部による負傷",
+      "components": [
+        "M03",
+        "A01"
+      ],
+      "chapters": [
+        "ch-06",
+        "ch-09",
+        "ch-10",
+        "ch-11"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-04",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-05",
+      "hazard": "荷の落下",
+      "harm": "手足の損傷",
+      "components": [
+        "M01"
+      ],
+      "chapters": [
+        "ch-04",
+        "ch-05"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-06",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-06",
+      "hazard": "鋭利な端部",
+      "harm": "切創",
+      "components": [
+        "G01",
+        "M01"
+      ],
+      "chapters": [
+        "ch-09",
+        "ch-12"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "C-02",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-07",
+      "hazard": "ワーク飛散",
+      "harm": "打撲・眼の損傷",
+      "components": [
+        "M02",
+        "A01"
+      ],
+      "chapters": [
+        "ch-07"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-07",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-08",
+      "hazard": "不安定な据付",
+      "harm": "移動・転倒",
+      "components": [
+        "M01"
+      ],
+      "chapters": [
+        "ch-05"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "C-01",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-09",
+      "hazard": "異常復帰誤操作",
+      "harm": "再始動による挟まれ",
+      "components": [
+        "CP01"
+      ],
+      "chapters": [
+        "ch-07",
+        "ch-11"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-08",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    },
+    {
+      "id": "H-10",
+      "hazard": "解体の残留エネルギー",
+      "harm": "感電・挟まれ",
+      "components": [
+        "EC01",
+        "M02"
+      ],
+      "chapters": [
+        "ch-12"
+      ],
+      "general_location": "ch-02",
+      "point_of_use": "対応する危険作業手順の直前",
+      "label_index": "app-c",
+      "legacy_message": "W-09",
+      "avoidance": "危険領域へのアクセスでは停止・隔離・再投入防止・残留エネルギー確認。運転中はガードを維持。担当章で作業固有の方法を具体化。",
+      "verification": "本文・図・ラベルのIDと作業直前の警告配置を照合",
+      "residual_risk": "実機評価未実施、低減達成度は未判定"
+    }
+  ]
+}

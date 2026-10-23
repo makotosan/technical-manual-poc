@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "baseline": [
+    "ISO 20607:2019",
+    "JIS B 9719:2022"
+  ],
+  "status": "document-gap-assessment-completed-remediation-open",
+  "source": {
+    "iso": "https://www.iso.org/standard/68519.html",
+    "checked_on": "2026-10-23",
+    "verified_scope": "公式公開概要のライフサイクル全体の安全関連内容・構成・表現",
+    "licensed_full_text": "ユーザー提供PDFの本文を確認。序文/箇条1にISO 20607:2019とのIDTを記載。",
+    "provided_document": "JIS B 9719:2022 (ISO 20607:2019 IDT)",
+    "filename": "JISB9719_2019.pdf",
+    "sha256": "4d2ef50782cb5b5026cec06f25dd5c81f4be206fbfc9d6cc5d2d4d8b33a53985",
+    "pages": 25,
+    "scope_limit": "提供版に基づく文書ギャップ評価。規格の現行性・訂正票、機械適合・安全機能検証・他規格適合は未評価。"
+  },
+  "claim": "提供版に基づく文書ギャップ評価。現状は適合確認未達。条項別に不足・部分充足・未評価等を記録。機械の適合/認証を主張しない。",
+  "topics": [
+    {
+      "id": "SM-01",
+      "editorial_topic": "文書識別・目次",
+      "clause": "5.2.1.1/5.2.1.2",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "front",
+        "ch-01"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-02",
+      "editorial_topic": "安全・残留リスク",
+      "clause": "4.8/4.10.1/5.2.2.1/5.2.2.2/5.2.2.3",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-02",
+        "app-c"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-03",
+      "editorial_topic": "機械概要・用途・制限",
+      "clause": "5.2.3",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-03",
+        "app-a"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-04",
+      "editorial_topic": "輸送・取扱い・保管",
+      "clause": "5.2.4",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-04"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-05",
+      "editorial_topic": "据付・試運転",
+      "clause": "5.2.5.1〜5.2.5.5",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-05"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-06",
+      "editorial_topic": "製造者設定",
+      "clause": "5.2.6",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-06"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-07",
+      "editorial_topic": "運転",
+      "clause": "5.2.7",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-07"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-08",
+      "editorial_topic": "品種変更",
+      "clause": "5.2.8",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-08"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-09",
+      "editorial_topic": "点検・保守",
+      "clause": "5.2.9",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-09",
+        "app-b",
+        "app-d"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-10",
+      "editorial_topic": "清掃",
+      "clause": "5.2.10",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-10"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-11",
+      "editorial_topic": "故障診断・修理",
+      "clause": "5.2.11",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-11"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-12",
+      "editorial_topic": "撤去・廃棄",
+      "clause": "5.2.12",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "ch-12"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-13",
+      "editorial_topic": "付属資料・用語・索引",
+      "clause": "5.2.13〜5.2.16",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "app-a",
+        "app-b",
+        "app-c",
+        "app-d",
+        "app-e"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    },
+    {
+      "id": "SM-14",
+      "editorial_topic": "作成・表現・媒体",
+      "clause": "4.1〜4.11/6.1〜6.5/7",
+      "status": "mapped-remediation-open",
+      "locations": [
+        "front",
+        "ch-01"
+      ],
+      "verification": "正式規格と照合し、該当性・掲載箇所・内容証拠を人手確認。本文と図・表・作業手順の整合を検査。",
+      "owner": "規格レビュー担当（#14）"
+    }
+  ],
+  "exclusions": [
+    {
+      "topic": "空圧・油圧",
+      "reason": "非搭載の架空構成",
+      "status": "proposed-na-needs-review"
+    },
+    {
+      "topic": "食品・防爆用途",
+      "reason": "意図する使用の対象外",
+      "status": "proposed-na-needs-review"
+    }
+  ],
+  "release_gate": "架空PoCの開発・組版・公開受入はユーザー承認により進行可能。規格適合としての最終判定・実機転用に関する残件は#22で追跡。",
+  "assessment_baselines": {
+    "metadata_commit": "f1ee2f1a4ff17dd622e50d6ee17ad40a303877cd",
+    "draft_pr17_commit": "fe59907e0bc3681b2e7978e3745fa2f50cccdc10",
+    "draft_pr18_commit": "96279c04e3b255e5c4056a0223894f222466b1be",
+    "main_spike": "短い2章の検証素材でありTM-100本原稿ではない"
+  },
+  "clause_assessments": [
+    {
+      "clause": "4.1",
+      "printed_page": 3,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第1章1.1〜1.5、第2章2.4/2.13",
+      "finding": "用途・全ライフサイクル・誤使用は記載。機械固有の残留リスクと対策の根拠が未確定。",
+      "follow_up": "#10/#11/#14"
+    },
+    {
+      "clause": "4.2",
+      "printed_page": 3,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "前付、第1章1.3",
+      "finding": "役割表あり。清掃・分解担当が明示的な独立対象として不足。",
+      "follow_up": "#11"
+    },
+    {
+      "clause": "4.3",
+      "printed_page": 3,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第1章1.3、各章の対象者",
+      "finding": "力量区分あり。利用者ニーズ・知識に応じた手順評価は未実施。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "4.4",
+      "printed_page": 3,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第1章1.6、付録E、各章",
+      "finding": "用語集・表・図あり。操作名、状態/モード、英語図題、曖昧な仕様書参照を統一する。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "4.5",
+      "printed_page": 4,
+      "assessment": "部分充足",
+      "normative_kind": "許容＋条件付き要求",
+      "evidence": "第1章1.3、第8章8.1、第9章9.1",
+      "finding": "作業権限を一部区分。章別HTMLで対象者が誤読しない表示と文書識別を実装確認する。",
+      "follow_up": "#11/#13"
+    },
+    {
+      "clause": "4.6",
+      "printed_page": 4,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第1章1.7、付録D",
+      "finding": "供給者説明書の正式型式・版・該当節・取得先がない。一般的な規格列挙では代用不可。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "4.7",
+      "printed_page": 4,
+      "assessment": "未評価",
+      "normative_kind": "要求",
+      "evidence": "最終v0.2 HTML/PDF未生成",
+      "finding": "#16の短い検証版の成功を長文原稿の可読性証拠に流用しない。",
+      "follow_up": "#13/#15"
+    },
+    {
+      "clause": "4.8",
+      "printed_page": 4,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "前付、第2章2.2、付録C",
+      "finding": "信号語の意味は記載。実際の記号・見分けやすさは未実装/未検証。",
+      "follow_up": "#12/#13"
+    },
+    {
+      "clause": "4.9",
+      "printed_page": 5,
+      "assessment": "部分充足",
+      "normative_kind": "要求＋推奨",
+      "evidence": "前付目次、第1章1.5",
+      "finding": "章立てあり。全体が完結したと判断できるページ番号/電子リンクの最終確認が必要。",
+      "follow_up": "#13/#15"
+    },
+    {
+      "clause": "4.10.1",
+      "printed_page": 5,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "sample-data/residual-risks.yaml、付録C.1〜C.5、図2-3",
+      "finding": "12の作業別リスクについてマップ・危害・ユーザー保護方策・教育・参照を警告ラベル一覧と統合。設計RAと方策実施/検証の根拠、全件性、人手承認、最終出力への組込みは未了。",
+      "follow_up": "#10/#14"
+    },
+    {
+      "clause": "4.10.2",
+      "printed_page": 5,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第3章3.7、第11章11.3",
+      "finding": "状態とE101〜E501あり。信号・表示・色・警報の意味を一対一に確定する。",
+      "follow_up": "#11/#12"
+    },
+    {
+      "clause": "4.11",
+      "printed_page": 5,
+      "assessment": "適用性未確定",
+      "normative_kind": "条件付き要求",
+      "evidence": "機械仕様台帳",
+      "finding": "ネットワーク・保守ポート・更新経路が未定義。未記載をN/Aとはしない。",
+      "follow_up": "#10/#14"
+    },
+    {
+      "clause": "5.1",
+      "printed_page": 5,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "全章構成",
+      "finding": "表1は内容例。12章があるだけで要求充足とはならない。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "5.2.1.1",
+      "printed_page": 6,
+      "assessment": "部分充足",
+      "normative_kind": "条件付き要求",
+      "evidence": "前付「装置銘板と本書の適用」、第3章3.10、図3-5/図3-6、機械仕様台帳NP01",
+      "finding": "添付レイアウトに沿う銘板と貼付位置図を作成。架空製造番号/年月と説明書の適用・版・日付を対応。詳細連絡先、法的マーキング該当性、最終版QR/表示・製造記録・分冊識別の評価は未了。",
+      "follow_up": "#11/#13/#14"
+    },
+    {
+      "clause": "5.2.1.2",
+      "printed_page": 7,
+      "assessment": "不足",
+      "normative_kind": "要求＋推奨",
+      "evidence": "前付目次、第1章1.5",
+      "finding": "プレーンな章名リストにページ/リンクがない。前付・用語・索引・付録へのナビゲーションも最終生成物で検証。",
+      "follow_up": "#13/#15"
+    },
+    {
+      "clause": "5.2.2.1",
+      "printed_page": 8,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第2章、第4〜12章の警告欄",
+      "finding": "共通安全章と作業章の警告あり。章冒頭の一括警告が危険作業の説明箇所に対応するか確認。",
+      "follow_up": "#11/#12"
+    },
+    {
+      "clause": "5.2.2.2",
+      "printed_page": 8,
+      "assessment": "不足",
+      "normative_kind": "要求＋条件付き要求",
+      "evidence": "第2章2.3〜2.14、付録C",
+      "finding": "用途・誤使用あり。実ラベル画像、位置図、更新指示、作業別PPE、放出物等の該当性が不足。標準化記号の要求を独自図案だけで満たしたとしない。",
+      "follow_up": "#10/#12/#14"
+    },
+    {
+      "clause": "5.2.2.3",
+      "printed_page": 8,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第7章7.7、第11章11.2/11.4",
+      "finding": "停止・報告あり。事故時の対応、火災時の措置/消火機器、漏出等の適用性と措置が未確定。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "5.2.3",
+      "printed_page": 8,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第3章3.4/3.7/3.11、付録A",
+      "finding": "機器・用途・速度あり。寸法・質量・環境限度・機械/安全関連部品寿命が本文で未確定。新台帳だけでは本文充足としない。",
+      "follow_up": "#10/#11"
+    },
+    {
+      "clause": "5.2.4",
+      "printed_page": 9,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第4章4.2/4.5",
+      "finding": "梱包寸法/質量、重心、把持/吊り位置、方法、温湿度等が仕様書参照。台帳値の転記だけで安全な荷扱いを保証しない。",
+      "follow_up": "#10/#11/#12"
+    },
+    {
+      "clause": "5.2.5.1",
+      "printed_page": 9,
+      "assessment": "部分充足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第5章5.4、 第4章4.4",
+      "finding": "組立責任境界、組立/支持手順、工具、梱包処理の具体化が必要。",
+      "follow_up": "#10/#11"
+    },
+    {
+      "clause": "5.2.5.2",
+      "printed_page": 9,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第5章5.2/5.4",
+      "finding": "点荷重/動荷重、水平・固定方法、アクセス空間の最低条件が未確定。",
+      "follow_up": "#10/#11/#12"
+    },
+    {
+      "clause": "5.2.5.3",
+      "printed_page": 10,
+      "assessment": "不足",
+      "normative_kind": "要求＋条件付き要求",
+      "evidence": "第5章5.2/5.4、付録A",
+      "finding": "電源構想あり。接続仕様・保護接地等の実行可能な情報がない。空圧/液圧は非搭載前提の確認が必要。",
+      "follow_up": "#10/#11"
+    },
+    {
+      "clause": "5.2.5.4",
+      "printed_page": 10,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "第5章5.5.1〜5.5.4、第7章7.2、第9章9.6、付録B.5",
+      "finding": "始業前3点検に方法・観察可能な合否・不具合時の即時電源遮断/サービス連絡・復帰・記録を追加。S03の試験片/位置・停止条件、その他の設置時試験、実連絡先、実機検証、最終出力確認は未了。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "5.2.5.5",
+      "printed_page": 10,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第5章5.6、第6章6.4",
+      "finding": "試運転の枠組みあり。工具・測定・期待結果・合否・特有リスクを具体化。",
+      "follow_up": "#11/#12"
+    },
+    {
+      "clause": "5.2.6",
+      "printed_page": 10,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第6章6.3〜6.6",
+      "finding": "P-01以外の閾値/遅延/ガイド範囲が未確定。使用者の変更可能範囲と工場設定を分離。",
+      "follow_up": "#10/#11"
+    },
+    {
+      "clause": "5.2.7",
+      "printed_page": 10,
+      "assessment": "不足",
+      "normative_kind": "要求＋条件付き要求",
+      "evidence": "第7章7.2〜7.8、第11章11.3",
+      "finding": "通常起動/停止は記載。作業位置、具体的非常停止/復帰、詰まり除去、放出物/PPE/複数人作業の該当性等が未完了。",
+      "follow_up": "#11/#12/#14"
+    },
+    {
+      "clause": "5.2.8",
+      "printed_page": 11,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第8章8.3〜8.5",
+      "finding": "品種固有値、工具、ガイド調整・固定、試し運転の合否が未確定。",
+      "follow_up": "#11"
+    },
+    {
+      "clause": "5.2.9",
+      "printed_page": 12,
+      "assessment": "不足",
+      "normative_kind": "要求",
+      "evidence": "第9章9.3/9.5/9.6、付録B/D",
+      "finding": "安全関連検査の対象・頻度・方法・合否・不合格処置を集約する必要あり。周期、寿命、交換品仕様、隔離点/残留確認が未確定。",
+      "follow_up": "#10/#11/#14"
+    },
+    {
+      "clause": "5.2.10",
+      "printed_page": 12,
+      "assessment": "不足",
+      "normative_kind": "要求＋条件付き要求",
+      "evidence": "第10章10.3〜10.6",
+      "finding": "用具・洗浄剤・PPE・具体的隔離/復旧が未確定。非食品用途でも清掃要求全体はN/Aにしない。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "5.2.11",
+      "printed_page": 13,
+      "assessment": "部分充足",
+      "normative_kind": "要求＋推奨",
+      "evidence": "第11章11.3〜11.6",
+      "finding": "故障コードと担当区分あり。具体的修理・復帰手順と予期しない故障を製造者へ報告する方法/連絡先が不足。",
+      "follow_up": "#11"
+    },
+    {
+      "clause": "5.2.12",
+      "printed_page": 13,
+      "assessment": "不足",
+      "normative_kind": "条件付き要求",
+      "evidence": "第12章12.3〜12.6",
+      "finding": "解体順序は未検証の概念。工具/PPE、支持・隔離・分別の具体的条件を示す必要あり。",
+      "follow_up": "#11/#12/#14"
+    },
+    {
+      "clause": "5.2.13",
+      "printed_page": 13,
+      "assessment": "不足",
+      "normative_kind": "要求",
+      "evidence": "第1章1.7、付録A/D",
+      "finding": "機械固有の回路図・部品表・供給者資料・安全関連文書への有効な参照がない。",
+      "follow_up": "#11/#12/#14"
+    },
+    {
+      "clause": "5.2.14",
+      "printed_page": 14,
+      "assessment": "部分充足",
+      "normative_kind": "推奨",
+      "evidence": "付録E.2、前付目次",
+      "finding": "索引語あり。前付目次で索引を独立識別し、ページ/電子リンクを実装確認。",
+      "follow_up": "#13/#15"
+    },
+    {
+      "clause": "5.2.15",
+      "printed_page": 14,
+      "assessment": "部分充足",
+      "normative_kind": "推奨",
+      "evidence": "第1章1.6、付録E.1",
+      "finding": "用語集あり。全使用略語・同義語との統一照合が必要。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "5.2.16",
+      "printed_page": 14,
+      "assessment": "掲載あり",
+      "normative_kind": "許容",
+      "evidence": "付録A〜E",
+      "finding": "付録の存在を確認。任意の附属書を置いたことは他の要求の合格を意味しない。",
+      "follow_up": "#11"
+    },
+    {
+      "clause": "6.1",
+      "printed_page": 14,
+      "assessment": "部分充足",
+      "normative_kind": "一般指針",
+      "evidence": "全原稿",
+      "finding": "文体・用語の評価方針はあるが原稿全体の校閲は未完了。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "6.2",
+      "printed_page": 14,
+      "assessment": "未評価",
+      "normative_kind": "要求",
+      "evidence": "日本語原稿",
+      "finding": "日本語であることは確認。顧客との言語合意・対象国の要求認識の証拠なし。",
+      "follow_up": "#14"
+    },
+    {
+      "clause": "6.3",
+      "printed_page": 14,
+      "assessment": "部分充足",
+      "normative_kind": "要求",
+      "evidence": "各章手順見出し",
+      "finding": "作業目的の見出しはある。一部「概念」「考え方」に留まり、正確・完全・曖昧でない実行情報が不足。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "6.4",
+      "printed_page": 15,
+      "assessment": "部分充足",
+      "normative_kind": "要求＋許容",
+      "evidence": "第5章5.4、第7章7.4、第9章9.7",
+      "finding": "順序付き手順あり。複数動作を1文へ列挙、抽象的な「指定方法」「確認」の結果・条件不足が残る。四部構成は許容であり全手順への必須とは扱わない。",
+      "follow_up": "#11/#14"
+    },
+    {
+      "clause": "6.5",
+      "printed_page": 15,
+      "assessment": "部分充足",
+      "normative_kind": "条件付き要求",
+      "evidence": "例: 第2章W-02、第7章W-02",
+      "finding": "信号語・危険源・危害・回避の4要素を持つ例あり。ただし全警告の妥当性と機械固有リスクとの整合は未確認。",
+      "follow_up": "#11/#12/#14"
+    },
+    {
+      "clause": "7",
+      "printed_page": 16,
+      "assessment": "未評価",
+      "normative_kind": "要求＋許容",
+      "evidence": "HTML/PDF出版計画",
+      "finding": "複数の提供形態は許容。顧客との形態合意・対象国要求・必要時の利用可能性は未評価。Web公開だけで適合とはしない。",
+      "follow_up": "#14/#15"
+    },
+    {
+      "clause": "附属書A",
+      "printed_page": 17,
+      "assessment": "参考",
+      "normative_kind": "参考",
+      "evidence": "規格対応表",
+      "finding": "参考表として参照。独立した追加要求に数えない。",
+      "follow_up": "#14"
+    },
+    {
+      "clause": "附属書B",
+      "printed_page": 18,
+      "assessment": "参考",
+      "normative_kind": "参考",
+      "evidence": "最終v0.2 HTML/PDF未生成",
+      "finding": "フォント寸法、強調、見出し、色を可読性レビューへ使用。参考の数値を一律の必須合否基準としない。",
+      "follow_up": "#13/#15"
+    },
+    {
+      "clause": "附属書C",
+      "printed_page": 21,
+      "assessment": "参考",
+      "normative_kind": "参考",
+      "evidence": "各章文章",
+      "finding": "指示文改善の例として使用。要求は本文4.4/6.3/6.4で判断。",
+      "follow_up": "#11/#14"
+    }
+  ],
+  "poc_gate": {
+    "status": "passed",
+    "approved_by": "user",
+    "date": "2026-10-23",
+    "scope": "PoC仕様・文書の次工程進行",
+    "conformance_follow_up": "https://github.com/makotosan/technical-manual-poc/issues/22",
+    "note": "条項別評価は維持。PoCゲート合格はISO/JIS適合済みを意味しない。"
+  }
+}

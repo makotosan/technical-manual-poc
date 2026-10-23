@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "purpose": "編集台帳のみ。ビルド用manifestではない。",
+  "frontmatter": {
+    "id": "front",
+    "source": "manual-v02/00-frontmatter.md",
+    "pages": 4
+  },
+  "chapters": [
+    {
+      "id": "ch-01",
+      "title": "はじめに",
+      "source": "manual-v02/01-introduction.md",
+      "output": "chapters/ch-01.html",
+      "pages": 3,
+      "audiences": [
+        "全担当者"
+      ],
+      "anchor_prefix": "ch-01-"
+    },
+    {
+      "id": "ch-02",
+      "title": "安全上の注意",
+      "source": "manual-v02/02-safety.md",
+      "output": "chapters/ch-02.html",
+      "pages": 8,
+      "audiences": [
+        "全担当者"
+      ],
+      "anchor_prefix": "ch-02-"
+    },
+    {
+      "id": "ch-03",
+      "title": "装置の概要",
+      "source": "manual-v02/03-machine-overview.md",
+      "output": "chapters/ch-03.html",
+      "pages": 5,
+      "audiences": [
+        "全担当者"
+      ],
+      "anchor_prefix": "ch-03-"
+    },
+    {
+      "id": "ch-04",
+      "title": "輸送・保管",
+      "source": "manual-v02/04-transport.md",
+      "output": "chapters/ch-04.html",
+      "pages": 3,
+      "audiences": [
+        "運搬担当"
+      ],
+      "anchor_prefix": "ch-04-"
+    },
+    {
+      "id": "ch-05",
+      "title": "据付・組立・試運転",
+      "source": "manual-v02/05-installation.md",
+      "output": "chapters/ch-05.html",
+      "pages": 6,
+      "audiences": [
+        "据付技術者",
+        "電気技術者"
+      ],
+      "anchor_prefix": "ch-05-"
+    },
+    {
+      "id": "ch-06",
+      "title": "初期設定・調整",
+      "source": "manual-v02/06-settings.md",
+      "output": "chapters/ch-06.html",
+      "pages": 4,
+      "audiences": [
+        "据付技術者",
+        "保守技術者"
+      ],
+      "anchor_prefix": "ch-06-"
+    },
+    {
+      "id": "ch-07",
+      "title": "運転",
+      "source": "manual-v02/07-operation.md",
+      "output": "chapters/ch-07.html",
+      "pages": 8,
+      "audiences": [
+        "オペレーター"
+      ],
+      "anchor_prefix": "ch-07-"
+    },
+    {
+      "id": "ch-08",
+      "title": "段取り替え",
+      "source": "manual-v02/08-changeover.md",
+      "output": "chapters/ch-08.html",
+      "pages": 4,
+      "audiences": [
+        "段取り担当"
+      ],
+      "anchor_prefix": "ch-08-"
+    },
+    {
+      "id": "ch-09",
+      "title": "点検・保守",
+      "source": "manual-v02/09-maintenance.md",
+      "output": "chapters/ch-09.html",
+      "pages": 7,
+      "audiences": [
+        "保守技術者",
+        "電気技術者"
+      ],
+      "anchor_prefix": "ch-09-"
+    },
+    {
+      "id": "ch-10",
+      "title": "清掃",
+      "source": "manual-v02/10-cleaning.md",
+      "output": "chapters/ch-10.html",
+      "pages": 3,
+      "audiences": [
+        "清掃担当"
+      ],
+      "anchor_prefix": "ch-10-"
+    },
+    {
+      "id": "ch-11",
+      "title": "故障診断・修理",
+      "source": "manual-v02/11-troubleshooting.md",
+      "output": "chapters/ch-11.html",
+      "pages": 5,
+      "audiences": [
+        "保守技術者",
+        "電気技術者"
+      ],
+      "anchor_prefix": "ch-11-"
+    },
+    {
+      "id": "ch-12",
+      "title": "使用終了・廃棄",
+      "source": "manual-v02/12-decommissioning.md",
+      "output": "chapters/ch-12.html",
+      "pages": 3,
+      "audiences": [
+        "撤去担当",
+        "電気技術者"
+      ],
+      "anchor_prefix": "ch-12-"
+    }
+  ],
+  "appendices": [
+    {
+      "id": "app-a",
+      "title": "主要仕様・設定値",
+      "source": "manual-v02/appendices/a-specifications.md",
+      "output": "chapters/app-a.html"
+    },
+    {
+      "id": "app-b",
+      "title": "点検記録",
+      "source": "manual-v02/appendices/b-inspection.md",
+      "output": "chapters/app-b.html"
+    },
+    {
+      "id": "app-c",
+      "title": "警告ラベル",
+      "source": "manual-v02/appendices/c-warning-labels.md",
+      "output": "chapters/app-c.html"
+    },
+    {
+      "id": "app-d",
+      "title": "交換部品",
+      "source": "manual-v02/appendices/d-spare-parts.md",
+      "output": "chapters/app-d.html"
+    },
+    {
+      "id": "app-e",
+      "title": "用語・索引",
+      "source": "manual-v02/appendices/e-glossary-index.md",
+      "output": "chapters/app-e.html"
+    }
+  ],
+  "appendices_pages": 7,
+  "page_budget_total": 70,
+  "target_range": [
+    60,
+    80
+  ],
+  "nominal_target": 70,
+  "budget_note": "個別配分の合計は70ページ（前付4+各章59+付録7）。実組版で60〜80ページを確認し、水増ししない。",
+  "competence": {
+    "全担当者": "本書と担当章の教育",
+    "運搬担当": "荷扱い教育と運搬計画承認",
+    "据付技術者": "据付・試運転の権限",
+    "電気技術者": "適用資格、隔離・検証権限",
+    "オペレーター": "運転・停止・異常連絡の教育、盤内作業不可",
+    "段取り担当": "品種設定と隔離の許可",
+    "保守技術者": "隔離・機械保守の教育と権限",
+    "清掃担当": "指定清掃と隔離の教育",
+    "撤去担当": "解体・分別計画と隔離の許可"
+  },
+  "assets": {
+    "figures": "manual-v02/assets/figures",
+    "photos": "manual-v02/assets/photos",
+    "symbols": "manual-v02/assets/symbols"
+  },
+  "id_policy": {
+    "sections": "ch-NN-sNN、下位節ch-NN-sNN-sNN。付録app-a-sNN",
+    "figures": "F-01..F-24。表示番号と台帳IDを対応づける",
+    "tables": "T-01..T-18",
+    "messages": "W-01..W-18。旧D/C/N/W符号は#12で移行対応表を作る",
+    "reuse": "予約IDは削除後も再利用しない"
+  },
+  "figure_allocation": {
+    "safety": 3,
+    "structure": 4,
+    "transport": 2,
+    "installation": 3,
+    "settings": 2,
+    "operation": 3,
+    "changeover": 1,
+    "maintenance": 3,
+    "cleaning": 1,
+    "diagnostics": 1,
+    "disposal": 1
+  },
+  "table_allocation": {
+    "specifications": 3,
+    "operating_settings": 4,
+    "inspections": 4,
+    "faults": 3,
+    "labels": 2,
+    "metadata": 2
+  },
+  "message_allocation": {
+    "DANGER": 2,
+    "WARNING": 8,
+    "CAUTION": 5,
+    "NOTICE": 3
+  }
+}
