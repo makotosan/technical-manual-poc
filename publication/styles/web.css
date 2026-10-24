@@ -46,3 +46,4 @@ td,th {overflow-wrap:anywhere;vertical-align:top;}
 .book-toc,.book-toc ol {list-style:none;}
 .manual-figure {margin:1em 0;break-inside:avoid;}
 .manual-figure figcaption {font-size:.9em;font-style:italic;}
+nav ol {list-style:none;}
