@@ -29,7 +29,9 @@
     "visual:browser": "node scripts/check-visual-browser.mjs",
     "v02:test": "node scripts/build-manual.mjs --variant=v0.2 --output-prefix=dist-v02 && node --test publication-checks/acceptance.mjs",
     "v02:browser": "node scripts/check-publication-browser.mjs",
-    "editorial:check": "node scripts/check-editorial.mjs"
+    "editorial:check": "node scripts/check-editorial.mjs",
+    "pages:stage": "node scripts/stage-pages.mjs",
+    "v02:reproducibility": "node scripts/check-publication-reproducibility.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
