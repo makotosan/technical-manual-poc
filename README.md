@@ -159,3 +159,5 @@ Issue #12の共通警告18種と図表の検証は[docs/figures-warnings.md](doc
 ## 長文v0.2の選択
 
 npm run build:pdf -- --variant=v0.2 で章別HTMLから1冊のPDFを生成します。既定はv0.1です。分離検証はnpm run v02:test、操作・出力・公開方針は[docs/publication.md](docs/publication.md)を参照してください。
+
+編集整合の検査は npm run editorial:check、指摘・責任先・規格評価の証拠索引は [編集レビュー](docs/editorial-review.md) を参照してください。
