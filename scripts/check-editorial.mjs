@@ -63,5 +63,5 @@ for(const f of visuals.figures){
  }
 }
 assert(review.findings.filter(f=>f.priority==="high").every(f=>f.status==="resolved"||f.status==="deferred-22"));
-const result={chapters:sources.size,hazards:hazardData.hazards.length,residualRisks:residual.records.length,warningPlacements:placements,figures:visuals.figures.length,clauses:standards.clause_assessments.length,humanSignOff:"pending-pr-review"};
+const result={chapters:sources.size,hazards:hazardData.hazards.length,residualRisks:residual.records.length,warningPlacements:placements,figures:visuals.figures.length,clauses:standards.clause_assessments.length,humanSignOff:standards.editorial_review.human_sign_off};
 console.log("PASS editorial consistency:",JSON.stringify(result));

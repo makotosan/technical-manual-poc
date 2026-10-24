@@ -1,163 +1,89 @@
-# technical-manual-poc
+# Technical Manual PoC
 
-3章のMarkdownをEleventyで1つのHTMLにまとめ、その同じHTMLをWeb公開とVivliostyle PDF組版に使うミニマルPoCです。
+架空のTM-100取扱説明書を、Markdown → Eleventy → 共通HTML → Vivliostyle PDFで出版するPoCです。
+v0.1の3章原稿はmanual/に保全し、v0.2の前付・12章・付録A〜Eはmanual-v02/に置きます。
+v0.2はWeb目次と章別HTMLを生成し、その同じ19文書から1冊のPDFを組版します。別のMarkdown変換、結合HTML、PDFの結合は行いません。
 
-```text
-manual/*.md + manual/assets/
-              ↓ Eleventy
-        dist-web/index.html
-         ├─ GitHub Pages
-         └─ Vivliostyle + styles/print.css → dist-pdf/manual.pdf
-```
+## 実行環境
 
-公開サイト: https://makotosan.github.io/technical-manual-poc/
+Node.js **24.19.0** / npm **10.7.0** を使用します。.node-version/.nvmrc、package-lock.json、ActionsのSHAを固定しています。
 
-Issue #1〜#5の実装・受入・公開確認を完了し、PoC v0.1を受入済みです。
-受入コミットは fc326a9f10f6564160a4688b6fc04051c48fa6e0 です。
-[受入結果と引き継ぎ](docs/acceptance.md)を参照してください。
-
-## セットアップ
-
-- Node.js **24.19.0**（.node-version / .nvmrc）
-- npm **10.7.0**（packageManager / engines）
-- Eleventy **3.1.7**
-- Vivliostyle CLI **11.4.0**
-- Chrome for Testing **155.0.8059.84**
-- Noto Sans JP **5.3.1**（400 / 700）
-
-```sh
+~~~powershell
 git clone https://github.com/makotosan/technical-manual-poc.git
 cd technical-manual-poc
-node --version
-npm --version
 npm ci
-npm run dev
-```
+npx @puppeteer/browsers install chrome@155.0.8059.84 --path "$env:LOCALAPPDATA\vivliostyle\browsers"
+~~~
 
-指定バージョンのNode/npmを用意してから実行します。必要なら npm install --global npm@10.7.0 でnpmを合わせます。
-開発サーバーが表示する /technical-manual-poc/ を開きます（通常 http://localhost:8080/technical-manual-poc/）。停止はCtrl+Cです。
-初回PDF生成時には固定Chromeをユーザーキャッシュへ自動取得するため、ネットワーク接続が必要です。
-LinuxではChrome用共有ライブラリが必要です。Ubuntu 24.04の導入コマンドは .github/workflows/publish.yml のブラウザー導入ステップを参照してください。
+Vivliostyleが使うChromeは155.0.8059.84です。CLIのブラウザー保存先へインストールしてください。CIのインストールコマンドは.github/workflows/publish.ymlを参照してください。
+Node/npm/Chromeをそろえたクリーンチェックアウトで、下記の両版の検査を実行します。CIも毎回クリーンチェックアウトとnpm ciから実行します。
 
-## コマンド
+## ビルドと検証
 
-| コマンド | 動作 |
-| --- | --- |
-| npm run dev | 監視・開発サーバー |
-| npm run build:web | 共通HTML・素材・フォントを生成 |
-| npm run build:pdf | HTMLを新規生成してからPDF化 |
-| npm run build:pdf:from-html | 既存HTMLを変更せずPDF化。CI用 |
-| npm run check:pdf | PDFの解析・複数ページ・A4サイズを検証 |
-| npm run test:artifacts | 既存HTML/PDFの章順・本文・アンカー・素材を検証。再ビルドしない |
-| npm run check:reproducibility | 未変更原稿の再ビルドでHTMLが一致することを検証 |
-| npm run test:propagation | 一時コピーで文章・画像参照を変更し、HTML/PDF両方への反映を検証 |
-| npm test | HTML/PDF生成、成果物検査、再現性と変更伝播をまとめて検証 |
+既定のローカルビルドはv0.1です。版はコマンド引数（優先）又はMANUAL_VARIANTで選択できます。
 
-通常の生成物は dist-web/ と dist-pdf/、変更伝播テストの確認画像は dist-acceptance/ に出ます。すべてGit管理外です。
-PDFバイト列の完全一致は要求しません。生成日時などは変動します。
+~~~powershell
+npm test
+npm run build:pdf -- --variant=v0.1
+npm run build:pdf -- --variant=v0.2
+npm run build:pdf:from-html -- --variant=v0.2
+~~~
 
-## 原稿を編集する
+通常の出力はdist-web/とdist-pdf/manual.pdfです。Webの再ビルドは生成先だけを選択した版で作り直します。PDFのみのビルドは直前に生成したHTMLの版と順序を検査します。
 
-本文はUTF-8の manual/*.md のみで編集します。画像は manual/assets/ に配置します。
-原稿中の画像参照は assets/ファイル名 とし、出力先の index.html を基準に解決します。
-生成されたHTMLやPDFを直接編集しないでください。
+v0.1を上書きしない全編v0.2検証と公開用の準備:
 
-章順は eleventy.config.js に明示した次の3章です。欠落・追加はエラーになります。
+~~~powershell
+npm run editorial:check
+npm run v02:test
+npm run v02:reproducibility
+npm run v02:browser
+npm run pages:stage
+~~~
 
-1. manual/01-introduction.md — はじめに
-2. manual/02-safety.md — 安全上の注意
-3. manual/03-operation.md — 操作方法
+v02:testはdist-v02-web/・dist-v02-pdf/に分離して生成します。v02:browserは固定Chromeを使用し、必要ならVISUAL_BROWSER_PATHで実行ファイルを指定します。
+spike:test（短いサイドバー検証）・visual:test（図表/18種の警告）もCIで実行します。
+開発時に別の出力先を使う場合は[出版構成](docs/publication.md)を参照してください。
 
-各章は先頭に1つの # 見出しを置き、目次のタイトルにも使います。
-見出し、表、リスト、リンク、ローカルPNG/SVGを使えます。生HTMLとMarkdown内のテンプレート構文処理は無効です。
-章リンクは #01-introduction などのファイル名です。見出しIDは章名-heading-連番で、見出しの挿入や並べ替えで連番が変わります。
+## WebとPDF
 
-## ファイル構成
+- [公開サイト](https://makotosan.github.io/technical-manual-poc/)
+- [配布PDF](https://makotosan.github.io/technical-manual-poc/manual.pdf)
+- [Actionsの実行・レビュー成果物](https://github.com/makotosan/technical-manual-poc/actions)
 
-| 場所 | 用途 |
-| --- | --- |
-| manual/ | 本文3章と入力画像 |
-| src/index.njk | 章と目次を単一HTMLへ統合 |
-| src/_includes/layout.njk | lang=jaの共通HTML |
-| lib/chapters.mjs | 変換済みHTMLの見出しレベル・IDの調整 |
-| styles/web.css / print.css | 画面 / A4印刷スタイル |
-| eleventy.config.js | 章順、出力、素材コピー、Pagesサブパス |
-| scripts/build-pdf.mjs | 同じHTMLの配信・PDF生成・ハッシュ確認 |
-| scripts/static-server.mjs | 127.0.0.1の空きポートで一時配信 |
-| scripts/check-propagation.mjs | 一時コピーでの変更伝播確認 |
-| test/ | 生成物の検査 |
-| .github/workflows/publish.yml | PR検証とmain公開 |
-| docs/acceptance.md | 受入結果・引き継ぎ |
+Issue #15のPRマージ後、Pagesはv0.2のdist-pages/を公開します。ローカルの既定v0.1と公開対象の選択は独立しています。
+PDFダウンロードは各ページに表示し、印刷時には隠します。索引・用語集から章や節へ移動できます。
+Noto Sans JPは依存から同梱し、外部フォント配信に依存しません。SIL Open Font Licenseをfonts/LICENSEへ同梱します。
+MuPDF 1.28.0（AGPL-3.0-or-later）は開発・検証用で、ブラウザーのJavaScriptには含めません。
 
-## 共通HTMLとPDF
+## CI・公開と確認
 
-Markdown変換はEleventyだけで行います。manual/manual.11tydata.json の permalink: false により、章別HTMLは出力しません。
-変換済み見出しを1段下げ、章ごとのIDを付けます。本文をPDF用に再変換・複製する処理はありません。
+PRでは両版の検査と公開用ファイルの梱包だけを行います。人がレビューしてマージすると、mainが同じ検査を行ってPagesへデプロイします。
+pages: write / id-token: writeはmainのデプロイジョブだけに付与します。必須チェックの強制は別途ブランチ保護で設定します。
 
-PDF化では dist-web/ を /technical-manual-poc/ にローカルHTTP配信します。公開済みPagesから取得しません。
-印刷CSSを追加してA4・余白・ページ番号・章開始の改ページを指定します。サンプル原稿は目次を含め4ページです。
-HTMLのSHA256を生成前後で比較し、変更されていないことを成功ログで確認します。失敗時には不完全なPDFを削除し、サーバーを終了します。
+pages:stageはv0.2の入力HTMLハッシュとPDFを照合し、全Webファイルをdist-pages/へコピーしてバイト一致を検査します。
+publication-evidence.jsonにビルドcommit、全HTMLとPDFのSHA256を保存します。Pages用tarを展開して全ファイルが同じことも検査します。
+v0.1のmanual-pdf、v0.2のv02-publication-reviewなどのActions成果物は14日保持します。公開PDFは次のデプロイまでPagesに残ります。
 
-Noto Sans JPは依存関係から dist-web/fonts/ にコピーし、外部フォント配信に依存しません。
-SIL Open Font License 1.1を fonts/LICENSE に同梱します。
-PDF本文・画素検査にはMuPDF 1.28.0（AGPL-3.0-or-later、開発・検証用）を使います。ブラウザー向けJavaScriptには含めません。
+初期設定はSettings → Pages → Source = GitHub Actionsです。環境のブランチ制限はmainを許可します。
+mainのDeploy成功後、公開内容を次のコマンドで照合します（SHAは実際のマージcommitへ置き換えます）。
 
-## GitHub Actions / Pages
+~~~powershell
+node scripts/check-publication-live.mjs --commit=MERGE_COMMIT_SHA
+~~~
 
-| 起動条件 | 処理 |
-| --- | --- |
-| PR | HTMLを1回生成 → PDF → 成果物検査 → 隔離した変更伝播検査 → PDF成果物保存 |
-| mainへのpush | 上記に加え、同じHTMLをPagesへ公開 |
-| 手動実行 | mainなら公開、それ以外は検証・PDF保存のみ |
+#15はマージだけで閉じず、公開チェック、PDFダウンロード、人による承認を確認してからv0.2.0タグを作成しクローズします。タグは自動作成しません。
 
-CIはUbuntu 24.04で実行し、公式ActionsをコミットSHAで固定します。
-通常成果物のテストは再ビルドせず、変更伝播は別の一時コピー内で実行します。
-PDF前後のHTMLハッシュとPages用tar内のHTMLが一致することを確認してから公開します。
-PRはデプロイしません。pages: write / id-token: write はmainのデプロイジョブだけに付与します。
-マージの強制的な禁止は、別途ブランチ保護で必須チェックを設定した場合だけ有効です。
+## ロールバックと保全
 
-### 初期設定とPDF取得
+不具合時はIssue #15の公開切替PRをrevertするPRを作り、レビュー・マージしてmainのデプロイ成功を確認します。元の公開v0.1へ戻す場合は、公開workflowのpathと梱包検査も一緒に戻します。
+v0.1.0タグとmanual/を保全し、旧technical-manual-publisherは変更しません。生成ファイルを原稿として編集しないでください。
 
-1. Settings → Actions → General でワークフロー内の公式 actions/* の実行を許可します。
-2. Settings → Pages → Build and deployment → Source を GitHub Actions にします。
-3. github-pages環境にブランチ制限がある場合はmainを許可します。
-4. PRの検証成功後、人がレビューしてマージします。
-5. mainの Deploy GitHub Pages 成功と公開サイトを確認します。
+## 受入記録と限界
 
-Actions → Publish manual → 成功した実行 → Artifacts → manual-pdf をダウンロードし、ZIP内のmanual.pdfを開きます。
-PDF成果物は14日保持します。期限切れならmainでワークフローを再実行します。
-github-pages成果物はデプロイ専用です。
+[最終受入](docs/v02-acceptance.md) / [編集レビュー](docs/editorial-review.md) / [規格ギャップ評価](docs/jis-b9719-assessment.md) / [図表・警告](docs/figures-warnings.md)
 
-### 失敗時とロールバック
-
-- 初回Pages公開で404になった場合はSourceと環境設定を確認し、反映を待って失敗したデプロイジョブだけを再実行します。初回の公開ではこれで成功しました。
-- ビルド失敗時は失敗ステップのログを確認します。原稿・画像・フォントの欠落なら入力を修正してPRで再検証します。
-- 公開内容を戻す場合は、該当マージをrevertするPRをレビュー・マージし、mainの自動デプロイ成功を確認します。
-
-## 範囲と制約
-
-このPoCは架空の公開原稿だけを扱います。顧客情報・機密情報は入れないでください。
-CMS、認証、DB、多言語、製品バリエーション、署名・暗号化、本番運用は対象外です。
-既存の technical-manual-publisher は別の保全対象で、専用PoCチェックアウト以外を変更しません。
-
-npm auditには既存のVivliostyle依存関係について15件（critical 1 / high 4 / moderate 10）の指摘があり、未解消です。
-依存関係の修正は別途の互換性検証が必要です。CI成功は依存関係の安全性を保証するものではありません。
-公開HTMLにはJavaScriptアプリケーションを含めません。
-
-原稿やCSSを変更したら、PDFの全ページを目視でも確認してください。
-自動検査は本文・画像の変更反映を検出しますが、すべての文字欠落、見切れ、改ページの妥当性を判定するものではありません。
-
-## v0.2に先立つ左目次の技術検証（Issue #16）
-
-短い manual-v02/ 原稿で、章別HTML・左目次・モバイル開閉・単一PDFを検証できます。
-実行は npm run spike:dev / npm run spike:test。既定のv0.1生成と現在のPages公開は切り替わりません。
-[設計・検証結果・#13への引き継ぎ](docs/sidebar-spike.md)を参照してください。
-## 図表・警告表示の検証
-
-Issue #12の共通警告18種と図表の検証は[docs/figures-warnings.md](docs/figures-warnings.md)を参照してください。npm run visual:testで独立したHTML/PDFを作成・検査します。既定の公開版は引き続きv0.1です。
-
-## 長文v0.2の選択
-
-npm run build:pdf -- --variant=v0.2 で章別HTMLから1冊のPDFを生成します。既定はv0.1です。分離検証はnpm run v02:test、操作・出力・公開方針は[docs/publication.md](docs/publication.md)を参照してください。
-
-編集整合の検査は npm run editorial:check、指摘・責任先・規格評価の証拠索引は [編集レビュー](docs/editorial-review.md) を参照してください。
+本書は出版検証用の架空サンプルです。PoCゲートの合格は、ISO/JIS適合、機械の安全性能、実機用説明書の承認を意味しません。未完了は[Issue #22](https://github.com/makotosan/technical-manual-poc/issues/22)で追跡します。原稿の0.2-draft表示は実機用文書が未承認であることを示し、出版PoCのタグとは区別します。
+CMS、認証、DB、多言語、署名・暗号化、本番運用は対象外です。公開HTMLにJavaScriptアプリは含めません。
+既存の依存監査指摘は15件（critical 1 / high 4 / moderate 10）で未解消です。CI成功は依存の安全性を保証しません。
+自動検査だけでは全ての見切れ・改ページを判定できません。原稿やCSS変更後はPDF全ページを目視確認してください。

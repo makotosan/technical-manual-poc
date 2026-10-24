@@ -1,0 +1,30 @@
+import assert from "node:assert/strict";
+import {readFile,writeFile,cp,rm,readdir} from "node:fs/promises";
+import {resolve,join,sep} from "node:path";
+import {createHash} from "node:crypto";
+import {orderedFiles} from "../lib/publication.mjs";
+const prefix=process.env.PUBLICATION_OUTPUT_PREFIX||"dist-v02";
+assert(/^dist(?:-[a-z0-9-]+)?$/.test(prefix));
+const web=prefix+"-web";
+const hash=async p=>createHash("sha256").update(await readFile(p)).digest("hex");
+const files=async root=>(await Promise.all((await readdir(root,{withFileTypes:true})).map(async e=>e.isDirectory()?(await files(join(root,e.name))).map(f=>e.name+"/"+f):[e.name]))).flat();
+const input=JSON.parse(await readFile(prefix+"-pdf/html-inputs.json","utf8"));
+assert.deepEqual(input.files,orderedFiles);
+for(let i=0;i<orderedFiles.length;i++)assert.equal(await hash(web+"/"+orderedFiles[i]),input.sha256[i],"HTML differs from PDF input");
+assert.equal(await hash(web+"/manual.pdf"),await hash(prefix+"-pdf/manual.pdf"));
+const arg=process.argv[2];
+if(arg&&!arg.startsWith("--verify-root="))throw new Error("Unknown Pages option");
+const target=arg?resolve(arg.slice(14)):resolve("dist-pages");
+if(!arg){
+ assert.equal(target,resolve(".")+sep+"dist-pages");
+ await rm(target,{recursive:true,force:true});
+ await cp(web,target,{recursive:true});
+ const evidence={variant:"v0.2",revision:"0.2-draft",commit:process.env.GITHUB_SHA||null,files:input.files,sha256:input.sha256,pdfSha256:await hash(web+"/manual.pdf")};
+ await writeFile(join(target,"publication-evidence.json"),JSON.stringify(evidence,null,2));
+}
+const expected=await files(web);
+for(const f of expected)assert.equal(await hash(join(web,f)),await hash(join(target,f)),"Packaged file differs: "+f);
+const evidence=JSON.parse(await readFile(join(target,"publication-evidence.json"),"utf8"));
+assert.equal(evidence.variant,"v0.2");assert.deepEqual(evidence.files,input.files);assert.deepEqual(evidence.sha256,input.sha256);
+assert.equal(evidence.pdfSha256,await hash(join(target,"manual.pdf")));
+console.log("PASS Pages package:",expected.length,"byte-identical HTML/PDF/assets; input manifest matches PDF.");

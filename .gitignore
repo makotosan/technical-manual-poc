@@ -173,3 +173,6 @@ dist-v02-review/
 # Explicit alternate publication outputs
 dist-*-web/
 dist-*-pdf/
+
+# Verified Pages package
+dist-pages/
