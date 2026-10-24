@@ -155,3 +155,7 @@ npm auditには既存のVivliostyle依存関係について15件（critical 1 / 
 ## 図表・警告表示の検証
 
 Issue #12の共通警告18種と図表の検証は[docs/figures-warnings.md](docs/figures-warnings.md)を参照してください。npm run visual:testで独立したHTML/PDFを作成・検査します。既定の公開版は引き続きv0.1です。
+
+## 長文v0.2の選択
+
+npm run build:pdf -- --variant=v0.2 で章別HTMLから1冊のPDFを生成します。既定はv0.1です。分離検証はnpm run v02:test、操作・出力・公開方針は[docs/publication.md](docs/publication.md)を参照してください。

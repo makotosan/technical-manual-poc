@@ -1,0 +1,6 @@
+<nav aria-label="章と節の目次"><p class="nav-label">ウェブ目次</p>
+<a href="{{ '../' if chapter else '' }}index.html"{% if not chapter %} aria-current="page"{% endif %}>全体目次</a>
+<ol>{% for item in publication.chapters %}<li>
+<a href="{{ '../' if chapter else '' }}{{ item.output }}#{{ item.id }}"{% if chapter and chapter.id == item.id %} aria-current="page"{% endif %}>{{ item.title }}</a>
+{% if chapter and chapter.id == item.id %}<ol>{% for section in item.sections %}<li class="toc-level-{{ section.level }}"><a href="#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ol>{% endif %}
+</li>{% endfor %}</ol></nav>

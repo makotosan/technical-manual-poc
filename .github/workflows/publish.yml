@@ -77,6 +77,19 @@ jobs:
             dist-visual-review/*.png
           if-no-files-found: error
           retention-days: 14
+      - name: Verify selected long-form v0.2 publication
+        run: npm run v02:test
+      - name: Upload v0.2 publication review
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: v02-publication-review
+          path: |
+            dist-v02-web
+            dist-v02-pdf/manual.pdf
+            dist-v02-pdf/html-inputs.json
+            dist-v02-review
+          if-no-files-found: error
+          retention-days: 14
       - name: Package and upload Pages HTML
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

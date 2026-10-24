@@ -164,3 +164,12 @@ dist-spike-review/
 dist-visual-web/
 dist-visual-pdf/
 dist-visual-review/
+
+# Long-form v0.2 review outputs
+dist-v02-web/
+dist-v02-pdf/
+dist-v02-review/
+
+# Explicit alternate publication outputs
+dist-*-web/
+dist-*-pdf/
