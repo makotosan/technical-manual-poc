@@ -34,7 +34,8 @@
       "legacy_message": "W-02",
       "id": "RR-01",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-02"
     },
     {
       "hazard_id": "H-01",
@@ -51,7 +52,8 @@
       "legacy_message": "W-02",
       "id": "RR-02",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-02"
     },
     {
       "hazard_id": "H-02",
@@ -68,7 +70,8 @@
       "legacy_message": "W-03",
       "id": "RR-03",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-03"
     },
     {
       "hazard_id": "H-02",
@@ -85,7 +88,8 @@
       "legacy_message": "W-03",
       "id": "RR-04",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-03"
     },
     {
       "hazard_id": "H-03",
@@ -102,7 +106,8 @@
       "legacy_message": "D-01",
       "id": "RR-05",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "D-01"
     },
     {
       "hazard_id": "H-04",
@@ -119,7 +124,8 @@
       "legacy_message": "W-04",
       "id": "RR-06",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-04"
     },
     {
       "hazard_id": "H-05",
@@ -136,7 +142,8 @@
       "legacy_message": "W-06",
       "id": "RR-07",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-06"
     },
     {
       "hazard_id": "H-06",
@@ -153,7 +160,8 @@
       "legacy_message": "C-02",
       "id": "RR-08",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "C-02"
     },
     {
       "hazard_id": "H-07",
@@ -170,7 +178,8 @@
       "legacy_message": "W-07",
       "id": "RR-09",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-07"
     },
     {
       "hazard_id": "H-08",
@@ -187,7 +196,8 @@
       "legacy_message": "C-01",
       "id": "RR-10",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-06"
     },
     {
       "hazard_id": "H-09",
@@ -204,7 +214,8 @@
       "legacy_message": "W-08",
       "id": "RR-11",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-08"
     },
     {
       "hazard_id": "H-10",
@@ -221,7 +232,8 @@
       "legacy_message": "W-09",
       "id": "RR-12",
       "assessment_basis": "TM100-EDITORIAL-01の架空シナリオ。設計RA/方策実施/有効性の実証は未完了",
-      "verification_status": "editorial-draft-engineering-validation-open"
+      "verification_status": "editorial-draft-engineering-validation-open",
+      "message_id": "W-09"
     }
   ],
   "warning_message_source": "sample-data/safety-messages.json",

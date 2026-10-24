@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-25",
+  "scope": "fictional-poc-editorial",
+  "findings": [
+    {
+      "id": "ED-01",
+      "priority": "high",
+      "status": "resolved",
+      "finding": "第2/4/5章でW-06が同一危険欄に重複",
+      "resolution": "各危険欄で1回に集約。H-05/H-08の対応は維持。"
+    },
+    {
+      "id": "ED-02",
+      "priority": "high",
+      "status": "resolved",
+      "finding": "H-08と付録Cに旧C-01の注意扱いが残存",
+      "resolution": "現行W-06を明示し、旧ID履歴と残留リスク12件を保持。"
+    },
+    {
+      "id": "ED-03",
+      "priority": "high",
+      "status": "resolved",
+      "finding": "H-01の第9/10章、H-02/H-04の第11章、H-03の第12章で対応する警告が不足",
+      "resolution": "保守・保守清掃・修理節の本文前に共通警告を追加。"
+    },
+    {
+      "id": "ED-04",
+      "priority": "medium",
+      "status": "resolved",
+      "finding": "状態表がモードと混在し非常停止行が欠落",
+      "resolution": "状態列に統一し非常停止と隔離保守の区別を明示。"
+    },
+    {
+      "id": "ED-05",
+      "priority": "medium",
+      "status": "resolved",
+      "finding": "第2章の参照表が将来予定表記で第6章を欠落",
+      "resolution": "実在する警告掲載章へ更新。"
+    },
+    {
+      "id": "ED-09",
+      "priority": "high",
+      "status": "resolved",
+      "finding": "第1章の役割表で清掃・撤去・電気担当が欠落し、オペレーターの品種切替許可と台帳が不整合",
+      "resolution": "段取り・清掃・撤去・電気担当の力量と権限を明示。オペレーターの別作業は別許可が必要とした。"
+    },
+    {
+      "id": "ED-06",
+      "priority": "high",
+      "status": "deferred-22",
+      "finding": "隔離点/停止時間/PL・SIL/試験片/固定トルク等の設計検証が未完了",
+      "resolution": "#22で設計・安全レビュー担当が検証。実機用説明書の発行・実機転用は不可。架空PoCの受入はユーザー承認の範囲で進行。"
+    },
+    {
+      "id": "ED-07",
+      "priority": "high",
+      "status": "deferred-22",
+      "finding": "連絡先・QR固定発行先・正式ラベルと標識が未確定",
+      "resolution": "#22で製造者・文書管理担当が確定。現行は架空レビュー用と明示、実機用発行は不可。"
+    },
+    {
+      "id": "ED-08",
+      "priority": "medium",
+      "status": "pending-human",
+      "finding": "最終編集者による承認",
+      "resolution": "本PRの差分・証拠を人がレビューしてマージ。署名を自動的に付与しない。"
+    }
+  ]
+}

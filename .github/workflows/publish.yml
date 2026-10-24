@@ -77,6 +77,8 @@ jobs:
             dist-visual-review/*.png
           if-no-files-found: error
           retention-days: 14
+      - name: Verify editorial consistency
+        run: npm run editorial:check
       - name: Verify selected long-form v0.2 publication
         run: npm run v02:test
       - name: Upload v0.2 publication review

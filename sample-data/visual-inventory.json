@@ -303,7 +303,7 @@
     {
       "id": "T-13",
       "source": "manual-v02/03-machine-overview.md",
-      "heading": "3.8 動作モード",
+      "heading": "3.8 動作状態",
       "ordinal_in_source": 5,
       "rows": 5,
       "acceptance_set": "baseline-18",
