@@ -1,0 +1,26 @@
+@import url("../fonts/400.css");
+@import url("../fonts/700.css");
+@page {size:A4;margin:18mm 17mm 20mm;@bottom-center {content:counter(page);font-size:9pt;}}
+body {font-family:"Noto Sans JP",sans-serif;font-size:10pt;line-height:1.7;color:#182a38;}
+.web-sidebar,.web-mobile-toc,.web-skip,.web-document-id {display:none!important;}
+.web-shell,.reading-area {display:block!important;max-width:none!important;margin:0!important;padding:0!important;}
+h1 {font-size:20pt;}h2 {font-size:14pt;}h3 {font-size:11.5pt;}h4 {font-size:10.5pt;}
+h1,h2,h3,h4 {break-after:avoid;}
+p {orphans:3;widows:3;}
+a {color:inherit;text-decoration:none;}
+a[href]::after {content:none;}
+.table-scroll {overflow:visible;display:block;margin:.8em 0;}
+table {width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;font-size:8.5pt;}
+caption {font-weight:700;text-align:left;break-after:avoid;}
+th,td {border:1px solid #8da2b2;padding:5px;overflow-wrap:anywhere;vertical-align:top;}
+thead {display:table-header-group;} tr {break-inside:avoid;} th {background:#edf1f4;}
+img {max-width:100%;height:auto;max-height:90mm;object-fit:contain;}
+.safety-hazard {max-height:none;}
+.book-toc {font-size:9pt;}
+.toc-level-3 {margin-left:.8em;} .toc-level-4 {margin-left:1.5em;}
+
+.figure-target {display:block;break-inside:avoid;}
+
+.book-toc,.book-toc ol {list-style:none;}
+.manual-figure {margin:1em 0;break-inside:avoid;}
+.manual-figure figcaption {font-size:.9em;font-style:italic;}

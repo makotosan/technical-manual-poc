@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+permalink: index.html
+---
+<h1 id="book-toc">目次</h1><p>{{ publication.title }} / {{ publication.document }} / {{ publication.revision }}</p>
+<p>架空PoCの出版検証用。規格適合の残件はIssue #22で管理しています。</p>
+<ol class="book-toc">{% for item in publication.chapters %}
+<li><a href="{{ item.output }}#{{ item.id }}">{{ item.title }}</a>
+<ol>{% for section in item.sections %}<li class="toc-level-{{ section.level }}"><a href="{{ item.output }}#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ol>
+</li>{% endfor %}</ol>
+<h2 id="figure-list">図の一覧</h2><ul>{% for f in visuals.figures %}{% for c in publication.chapters %}{% if c.source == f.source %}<li><a href="{{ c.output }}#{{ c.id }}-{{ f.id | lower }}">{{ f.id }} {{ f.caption }}</a></li>{% endif %}{% endfor %}{% endfor %}</ul>
+<h2 id="table-list">表の一覧</h2><ul>{% for t in visuals.tables %}{% for c in publication.chapters %}{% if c.source == t.source %}<li><a href="{{ c.output }}#{{ c.id }}-{{ t.id | lower }}">{{ t.id }} {{ t.heading }}</a></li>{% endif %}{% endfor %}{% endfor %}</ul>

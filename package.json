@@ -11,10 +11,10 @@
   "packageManager": "npm@10.7.0",
   "scripts": {
     "dev": "eleventy --serve",
-    "build:web": "eleventy",
-    "build:pdf": "npm run build:web && npm run build:pdf:from-html",
+    "build:web": "node scripts/build-manual.mjs --format=web",
+    "build:pdf": "node scripts/build-manual.mjs --format=both",
     "test": "npm run build:web && npm run build:pdf:from-html && npm run test:artifacts && npm run check:reproducibility && npm run test:propagation",
-    "build:pdf:from-html": "node scripts/build-pdf.mjs",
+    "build:pdf:from-html": "node scripts/build-manual.mjs --format=pdf --skip-web",
     "check:pdf": "node scripts/validate-pdf.mjs",
     "test:artifacts": "node --test --test-concurrency=1",
     "check:reproducibility": "node scripts/check-reproducibility.mjs",
@@ -26,7 +26,9 @@
     "visual:build:web": "eleventy --config=eleventy.visual.config.js",
     "visual:build:pdf": "npm run visual:build:web && node scripts/build-visual-pdf.mjs",
     "visual:test": "npm run visual:build:pdf && node --test visual-checks/acceptance.mjs",
-    "visual:browser": "node scripts/check-visual-browser.mjs"
+    "visual:browser": "node scripts/check-visual-browser.mjs",
+    "v02:test": "node scripts/build-manual.mjs --variant=v0.2 --output-prefix=dist-v02 && node --test publication-checks/acceptance.mjs",
+    "v02:browser": "node scripts/check-publication-browser.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
