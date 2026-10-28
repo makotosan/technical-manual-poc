@@ -623,6 +623,6 @@
     "report": "docs/editorial-review.md",
     "scope": "現行18文書の編集整合。過去45項目の規格判定は変更しない。",
     "conformance_owner": "規格レビュー担当（#22）",
-    "human_sign_off": "pending-pr-review"
+    "human_sign_off": "user-confirmed-merge-PR27-2026-10-25"
   }
 }

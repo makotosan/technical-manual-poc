@@ -21,6 +21,7 @@ test("one manifest drives 18 source documents, headings and ordered PDF entries"
  assert.equal((await readdir(root+"/chapters")).filter(f=>f.endsWith(".html")).length,18);
  for(const c of publication.chapters){
   const html=htmls.get(c.output);const set=ids(html);
+  assert(html.includes('href="../manual.pdf" download'),"PDF download on every chapter");
   assert(set.has(c.id));for(const section of c.sections)assert(set.has(section.id),section.id);
   assert(!html.includes("[[safety:"));assert(!html.includes("第1章 構成の確認"));
  }
@@ -42,6 +43,7 @@ test("all relative HTML/asset/fragment links resolve at the Pages subpath",async
  }
 });
 test("published chapter HTML is unchanged after PDF creation",async()=>{
+ assert.deepEqual(await readFile(root+"/manual.pdf"),await readFile(prefix+"-pdf/manual.pdf"),"Web download equals reviewed PDF");
  const evidence=JSON.parse(await readFile(prefix+"-pdf/html-inputs.json","utf8"));assert.deepEqual(evidence.files,orderedFiles);
  for(let i=0;i<orderedFiles.length;i++)assert.equal(createHash("sha256").update(await readFile(root+"/"+orderedFiles[i])).digest("hex"),evidence.sha256[i]);
  const all=[...htmls.values()].join("\n");
@@ -50,8 +52,8 @@ test("published chapter HTML is unchanged after PDF creation",async()=>{
 });
 test("multi-document PDF has all chapters, warning prose, internal links and A4 pagination",async()=>{
  const bytes=await readFile(prefix+"-pdf/manual.pdf");const pdf=await PDFDocument.load(bytes);const doc=mupdf.Document.openDocument(bytes,"application/pdf");
- assert(pdf.getPageCount()>=19);const pages=Array.from({length:doc.countPages()},(_,i)=>doc.loadPage(i).toStructuredText().asText());const text=pages.join("\n");const normalized=text.replace(/\s+/g,"");
- assert(!text.includes("ウェブ目次"));assert(!text.includes("章と節の目次を開閉"));assert(!text.includes("本文へ移動"));
+ assert(pdf.getPageCount()>=60&&pdf.getPageCount()<=80,"v0.2 must have 60–80 pages");const pages=Array.from({length:doc.countPages()},(_,i)=>doc.loadPage(i).toStructuredText().asText());const text=pages.join("\n");const normalized=text.replace(/\s+/g,"");
+ assert(!text.includes("ウェブ目次"));assert(!text.includes("章と節の目次を開閉"));assert(!text.includes("本文へ移動"));assert(!text.includes("PDFをダウンロード"));
  for(const c of publication.chapters)assert(normalized.includes(c.title.replace(/\s+/g,"")),c.title);
  for(const m of messages){assert(normalized.includes(m.consequence.replace(/\s+/g,"")),m.id);assert(normalized.includes(m.avoidance.replace(/\s+/g,"")),m.id);}
  let links=0;for(let i=0;i<doc.countPages();i++){
@@ -67,3 +69,5 @@ test("multi-document PDF has all chapters, warning prose, internal links and A4 
  await writeFile("dist-v02-review/summary.json",JSON.stringify({pages:doc.countPages(),internalLinks:links},null,2));
  console.log("v0.2 PDF:",doc.countPages(),"pages,",links,"internal links");
 });
+
+test("glossary and index offer working chapter/section links",()=>{const html=htmls.get("chapters/app-e.html");assert((html.match(/href="ch-\d{2}\.html#/g)||[]).length>=30);});

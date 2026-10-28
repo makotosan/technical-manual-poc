@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
+import { readFile, writeFile, mkdir, rm, copyFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { createHash } from "node:crypto";
 import { spawn } from "node:child_process";
@@ -42,6 +42,7 @@ try {
   const after = await Promise.all(files.map(async file => hash(await readFile(web+"/" + file))));
   if (JSON.stringify(before) !== JSON.stringify(after)) throw new Error("PDF build mutated HTML inputs");
   await writeFile(pdf+"/html-inputs.json",JSON.stringify({files,sha256:before},null,2));
+  await copyFile(pdf+"/manual.pdf",web+"/manual.pdf");
   console.log("All ordered HTML entries unchanged:", files.join(", "));
 } catch(error) {
   await rm(pdf+"/manual.pdf", { force: true });

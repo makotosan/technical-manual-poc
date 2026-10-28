@@ -7,6 +7,7 @@
 <div class="web-shell"><aside class="web-sidebar">{% include "nav.njk" %}</aside>
 <main class="reading-area" id="reading-content" tabindex="-1">
 <details class="web-mobile-toc"><summary>章と節の目次を開閉</summary>{% include "nav.njk" %}</details>
+<p class="web-download"><a href="{{ '../' if chapter else '' }}manual.pdf" download>取扱説明書PDFをダウンロード</a></p>
 {% if chapter %}<p class="web-document-id">{{ publication.document }} / {{ publication.revision }} · 対象：{{ chapter.audiences | join('、') }}</p>{% endif %}
 {{ content | safe }}
 </main></div></body></html>

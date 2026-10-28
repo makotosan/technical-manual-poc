@@ -81,6 +81,10 @@ jobs:
         run: npm run editorial:check
       - name: Verify selected long-form v0.2 publication
         run: npm run v02:test
+      - name: Verify v0.2 HTML reproducibility
+        run: npm run v02:reproducibility
+      - name: Stage verified v0.2 HTML and PDF for Pages
+        run: npm run pages:stage
       - name: Upload v0.2 publication review
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -93,17 +97,14 @@ jobs:
           if-no-files-found: error
           retention-days: 14
       - name: Package and upload Pages HTML
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: dist-web
+          path: dist-pages
       - name: Verify packaged and original HTML match
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
           mkdir "$RUNNER_TEMP/pages-check"
-          tar -xf "$RUNNER_TEMP/artifact.tar" -C "$RUNNER_TEMP/pages-check" ./index.html
-          cmp dist-web/index.html "$RUNNER_TEMP/pages-check/index.html"
-          sha256sum --check "$RUNNER_TEMP/manual-html.sha256"
+          tar -xf "$RUNNER_TEMP/artifact.tar" -C "$RUNNER_TEMP/pages-check"
+          node scripts/stage-pages.mjs --verify-root="$RUNNER_TEMP/pages-check"
 
   deploy:
     name: Deploy GitHub Pages

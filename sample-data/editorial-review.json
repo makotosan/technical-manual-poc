@@ -61,9 +61,9 @@
     {
       "id": "ED-08",
       "priority": "medium",
-      "status": "pending-human",
+      "status": "approved-by-merge",
       "finding": "最終編集者による承認",
-      "resolution": "本PRの差分・証拠を人がレビューしてマージ。署名を自動的に付与しない。"
+      "resolution": "ユーザーがPR #27のマージを報告。GitHubでもマージを確認（2026-10-25）。"
     }
   ]
 }
